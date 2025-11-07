@@ -1,67 +1,62 @@
 """
 Authentication module for Quality Report LG Sinarmas dashboard.
 
-This module provides authentication functionality for protecting access to
-the dashboard. It handles login validation, session management, and cookie-based
-authentication persistence.
-""" 
+Works both locally (.env) and on Streamlit Cloud (st.secrets).
+"""
 
 import os
 import time
 import hashlib
-from typing import Tuple, Optional
-
+from typing import Optional
 from dotenv import load_dotenv
 import streamlit as st
 
-# Load environment variables
+# Load .env for local development
 load_dotenv()
 
-# Authentication configuration
-USERNAME = os.getenv("USERNAMES")
-PASSWORD = os.getenv("PASSWORDS")
+# Read credentials from Streamlit Secrets (preferred) or .env (fallback)
+USERNAME = st.secrets.get("USERNAMES", os.getenv("USERNAMES"))
+PASSWORD = st.secrets.get("PASSWORDS", os.getenv("PASSWORDS"))
 
 # Security constants
 COOKIE_KEY = "session_token"
 COOKIE_EXPIRY_DAYS = 30
-COOKIE_VALUE = hashlib.sha256(f"{USERNAME}:{PASSWORD}".encode()).hexdigest()
+
+# Generate cookie hash based on credentials
+if USERNAME and PASSWORD:
+    COOKIE_VALUE = hashlib.sha256(f"{USERNAME}:{PASSWORD}".encode()).hexdigest()
+else:
+    COOKIE_VALUE = None
 
 
 def validate_login(username: str, password: str) -> bool:
     """
     Validate user credentials against stored values.
-    
-    Parameters:
-    -----------
-    username : str
-        The username entered by the user
-    password : str
-        The password entered by the user
-        
-    Returns:
-    --------
-    bool
-        True if credentials are valid, False otherwise
+    Supports plain text or hashed password if needed.
     """
     if not USERNAME or not PASSWORD:
-        st.error("Authentication credentials not configured.")
+        st.error("⚠️ Authentication credentials not configured. "
+                 "Please set USERNAMES and PASSWORDS in Streamlit Secrets or .env.")
         return False
-        
-    return username == USERNAME and password == PASSWORD
+
+    # Direct match (default)
+    if password == PASSWORD:
+        return username == USERNAME
+
+    # Optional: Uncomment if you use hashed passwords
+    # hashed_input = hashlib.sha256(password.encode()).hexdigest()
+    # return username == USERNAME and hashed_input == PASSWORD
+
+    return False
 
 
 def is_authenticated() -> bool:
     """
     Check if the user is authenticated.
-    
-    Returns:
-    --------
-    bool
-        True if the user is authenticated, False otherwise
     """
     return (
-        st.session_state.get("logged_in", False) or 
-        st.session_state.get(COOKIE_KEY) == COOKIE_VALUE
+        st.session_state.get("logged_in", False)
+        or st.session_state.get(COOKIE_KEY) == COOKIE_VALUE
     )
 
 
@@ -69,31 +64,25 @@ def logout() -> None:
     """
     Log out the user by clearing session state and cookies.
     """
-    if "logged_in" in st.session_state:
-        del st.session_state["logged_in"]
-    
-    if COOKIE_KEY in st.session_state:
-        del st.session_state[COOKIE_KEY]
+    for key in ("logged_in", COOKIE_KEY):
+        if key in st.session_state:
+            del st.session_state[key]
 
 
 def show_login() -> bool:
     """
-    Display the login interface and handle authentication process.
-    
-    Returns:
-    --------
-    bool
-        True if the user is authenticated, False otherwise
+    Display the login interface and handle authentication.
+    Returns True if user is authenticated.
     """
-    # If already authenticated, skip login
+    # Already authenticated
     if is_authenticated():
         return True
 
-    # Display login form centered within the page layout
+    # Login form
     spacer_left, main_column, spacer_right = st.columns([1, 2, 1])
     with main_column:
         st.image("lgsm_logo.png", width=220)
-        st.title("Login - Quality Report LG Sinarmas")
+        st.title("Login - Quality Report LG SinarMas")
 
         with st.form("login_form"):
             username = st.text_input("Username")
@@ -102,40 +91,25 @@ def show_login() -> bool:
 
             if submit_button:
                 if validate_login(username, password):
-                    # Set authentication status
                     st.session_state["logged_in"] = True
                     st.session_state[COOKIE_KEY] = COOKIE_VALUE
-
-                    # Show success message
-                    st.success("Login successful! Redirecting to the dashboard...")
+                    st.success("✅ Login successful! Redirecting to the dashboard...")
                     time.sleep(1)
                     st.rerun()
                 else:
-                    st.error("Invalid username or password")
+                    st.error("❌ Invalid username or password")
                     return False
-    
-    # Add some information text
-    # st.info("Please login to access the quality report dashboard.")
-    
+
     return False
 
 
 def require_auth(func):
     """
-    Decorator to require authentication for a Streamlit page.
-    
-    Parameters:
-    -----------
-    func : callable
-        The function to be protected by authentication
-        
-    Returns:
-    --------
-    callable
-        Wrapped function that checks authentication before execution
+    Decorator to protect Streamlit pages with authentication.
     """
     def wrapper(*args, **kwargs):
         if not show_login():
             return
         return func(*args, **kwargs)
+
     return wrapper
