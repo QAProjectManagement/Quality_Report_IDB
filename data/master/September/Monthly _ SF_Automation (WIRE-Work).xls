@@ -1,0 +1,865 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<title>Monthly | SF_Automation (WIRE-Work)</title>
+<style type="text/css">
+table {
+    mso-displayed-decimal-separator:"\.";
+    mso-displayed-thousand-separator:"\,";
+}
+body
+{
+    margin: 0px;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    color:black;
+}
+
+</style>
+<META HTTP-EQUIV="Content-Type" Content="application/vnd.ms-excel; charset=UTF-8">
+<!-- JRA-7598 - ensure fields (e.g. description) occupy only one cell - even fields containing newlines. -->
+<!--
+Vertical align all cells to the top, in order to align all issue rows of issuetable to the top,
+since Excel does not use or save the css files it is hardcoded here.
+-->
+<style>
+@page
+{
+mso-page-orientation:landscape;
+margin:.25in .25in .5in .25in;
+mso-header-margin:.5in;
+mso-footer-margin:.25in;
+mso-footer-data:"&R&P of &N";
+mso-horizontal-page-align:center;
+mso-vertical-page-align:center;
+}
+
+td.issuekey,
+td.issuetype,
+td.status {
+    mso-style-parent: "";
+    mso-number-format: \@;
+    text-align: left;
+}
+br
+{
+    mso-data-placement:same-cell;
+}
+
+td
+{
+    vertical-align: top;
+}
+</style>
+
+<!--[if gte mso 9]><xml>
+<x:ExcelWorkbook>
+<x:ExcelWorksheets>
+<x:ExcelWorksheet>
+<x:Name>general_report</x:Name>
+<x:WorksheetOptions>
+<x:Print>
+<x:ValidPrinterInfo/>
+</x:Print>
+</x:WorksheetOptions>
+</x:ExcelWorksheet>
+</x:ExcelWorksheets>
+</x:ExcelWorkbook>
+</xml><![endif]-->
+</head>
+<body>
+
+<table border="1">
+    <tr bgcolor="#A50034" height="48">
+        <td colspan="5">
+            <img src="https://wire.lgcns.com/jira/jira-logo-scaled.png" width="181" height="48" border="0" alt="Monthly | SF_Automation (WIRE-Work)">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="5">
+            <a href="https://wire.lgcns.com/jira/issues/?filter=53630">Monthly | SF_Automation (WIRE-Work)</a>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="5">
+            Displaying <strong>43</strong> issues at <strong>2025-10-06 12:14 PM</strong>.
+        </td>
+    </tr>
+</table>
+
+
+
+
+                            <issuetable-web-component data-content="issues">
+                <table id="issuetable"  border="1" cellpadding="3" cellspacing="1" width="100%">
+                        <thead>
+        <tr class="rowHeader">
+            
+                                                            <th scope="col" class="colHeaderLink headerrow-issuetype" data-id="issuetype">
+                            Issue Type
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-status" data-id="status">
+                            Status
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-issuekey" data-id="issuekey">
+                            Key
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-components" data-id="components">
+                            Component/s
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-summary" data-id="summary">
+                            Summary
+                                                    </th>
+                                                                    </tr>
+    </thead>
+    <tbody>
+                    
+
+                <tr id="issuerow2192059" rel="2192059" data-issuekey="SSMPP002-2695" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-2695" href="https://wire.lgcns.com/jira/browse/SSMPP002-2695">SSMPP002-2695</a>
+</td>
+                                            <td class="components">                        CIM            </td>
+                                            <td class="summary"><p>
+                [OC9 CIM] Comparing Factova 2.0 -&gt; 4.0 for EQPController in DDA1(-)
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2193742" rel="2193742" data-issuekey="SSMPP002-2715" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-2715" href="https://wire.lgcns.com/jira/browse/SSMPP002-2715">SSMPP002-2715</a>
+</td>
+                                            <td class="components">                        CIM            </td>
+                                            <td class="summary"><p>
+                [OC9 CIM] Analysis and check Factova options element between Version 2.0 and Version 4.0
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2193744" rel="2193744" data-issuekey="SSMPP002-2716" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-2716" href="https://wire.lgcns.com/jira/browse/SSMPP002-2716">SSMPP002-2716</a>
+</td>
+                                            <td class="components">                        CIM            </td>
+                                            <td class="summary"><p>
+                [OC9 CIM] Debugging AMRDBConverter crash on startup
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2195815" rel="2195815" data-issuekey="SSMPP002-2854" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-2854" href="https://wire.lgcns.com/jira/browse/SSMPP002-2854">SSMPP002-2854</a>
+</td>
+                                            <td class="components">                        CIM            </td>
+                                            <td class="summary"><p>
+                [OC9 CIM] Comparing Factova 2.0 -&gt; 4.0 for Options in Mixer Cathode
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2195812" rel="2195812" data-issuekey="SSMPP002-2852" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-2852" href="https://wire.lgcns.com/jira/browse/SSMPP002-2852">SSMPP002-2852</a>
+</td>
+                                            <td class="components">                        CIM            </td>
+                                            <td class="summary"><p>
+                [OC9 CIM] Comparing Factova 2.0 -&gt; 4.0 for VehicleController in Mixer Cathode
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2195813" rel="2195813" data-issuekey="SSMPP002-2853" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-2853" href="https://wire.lgcns.com/jira/browse/SSMPP002-2853">SSMPP002-2853</a>
+</td>
+                                            <td class="components">                        CIM            </td>
+                                            <td class="summary"><p>
+                [OC9 CIM] Comparing Factova 2.0 -&gt; 4.0 for EQPController in Mixer Cathode
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2201429" rel="2201429" data-issuekey="SSMPP002-2925" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-2925" href="https://wire.lgcns.com/jira/browse/SSMPP002-2925">SSMPP002-2925</a>
+</td>
+                                            <td class="components">                        RTD            </td>
+                                            <td class="summary"><p>
+                [ESOC9 RTD] Code Review RTD Query Performace Tuning
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2204373" rel="2204373" data-issuekey="SSMPP002-2973" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-2973" href="https://wire.lgcns.com/jira/browse/SSMPP002-2973">SSMPP002-2973</a>
+</td>
+                                            <td class="components">                        RTD            </td>
+                                            <td class="summary"><p>
+                [ESOC9 RTD] Analysis Potential Issues Related to Reserved Carrier
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2191203" rel="2191203" data-issuekey="SSMPP002-2688" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-2688" href="https://wire.lgcns.com/jira/browse/SSMPP002-2688">SSMPP002-2688</a>
+</td>
+                                            <td class="components">                        CIM            </td>
+                                            <td class="summary"><p>
+                [OC9 CIM] Convert AGV PDF Scenario Specification Protocol to Excel form
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2198019" rel="2198019" data-issuekey="SSMPP002-2875" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-2875" href="https://wire.lgcns.com/jira/browse/SSMPP002-2875">SSMPP002-2875</a>
+</td>
+                                            <td class="components">                        CIM            </td>
+                                            <td class="summary"><p>
+                [OC9 CIM] CIM Simulator Debugging
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2189199" rel="2189199" data-issuekey="SSMPP002-2589" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-2589" href="https://wire.lgcns.com/jira/browse/SSMPP002-2589">SSMPP002-2589</a>
+</td>
+                                            <td class="components">                        CIM,                     MCS,                     RTD            </td>
+                                            <td class="summary"><p>
+                [ESOC9 CIM-MCS-RTD] Integration Simulation Testing Assembly
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2207059" rel="2207059" data-issuekey="SSMPP002-2982" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-2982" href="https://wire.lgcns.com/jira/browse/SSMPP002-2982">SSMPP002-2982</a>
+</td>
+                                            <td class="components">                        HMI            </td>
+                                            <td class="summary"><p>
+                [ESHM HMI] Analizing why HMI is down on 9 September 2025
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2031203" rel="2031203" data-issuekey="SSMPP002-116" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-116" href="https://wire.lgcns.com/jira/browse/SSMPP002-116">SSMPP002-116</a>
+</td>
+                                            <td class="components">                        CIM            </td>
+                                            <td class="summary"><p>
+                [ESHM CIM] Mass Production IT System Troubleshooting and Testing Support
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2216647" rel="2216647" data-issuekey="SSMPP002-3208" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-3208" href="https://wire.lgcns.com/jira/browse/SSMPP002-3208">SSMPP002-3208</a>
+</td>
+                                            <td class="components">                        eIoT            </td>
+                                            <td class="summary"><p>
+                [ESOC2 eIoT] 202509 4th Week - Data Collection Monitoring Building 9
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2216639" rel="2216639" data-issuekey="SSMPP002-3200" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-3200" href="https://wire.lgcns.com/jira/browse/SSMPP002-3200">SSMPP002-3200</a>
+</td>
+                                            <td class="components">                        eIoT            </td>
+                                            <td class="summary"><p>
+                [ESNJ eIoT] 202509 4th Week - Data Collection Monitoring Building 8 &amp; 9
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2210415" rel="2210415" data-issuekey="SSMPP002-3032" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-3032" href="https://wire.lgcns.com/jira/browse/SSMPP002-3032">SSMPP002-3032</a>
+</td>
+                                            <td class="components">                        eIoT            </td>
+                                            <td class="summary"><p>
+                [ESNJ eIoT] 202509 - Data Collection Monitoring Building 7,8, &amp; 9
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2217229" rel="2217229" data-issuekey="SSMPP002-3239" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-3239" href="https://wire.lgcns.com/jira/browse/SSMPP002-3239">SSMPP002-3239</a>
+</td>
+                                            <td class="components">                        eIoT            </td>
+                                            <td class="summary"><p>
+                [ESOC1 eIoT] 202509 4th Week - Data Collection Monitoring All Building
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2201428" rel="2201428" data-issuekey="SSMPP002-2924" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-2924" href="https://wire.lgcns.com/jira/browse/SSMPP002-2924">SSMPP002-2924</a>
+</td>
+                                            <td class="components">                        RTD            </td>
+                                            <td class="summary"><p>
+                [ESOC9 RTD] Analysis Issue - Tray didn&#39;t get Command in the Diverter after Stacker
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2204363" rel="2204363" data-issuekey="SSMPP002-2970" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-2970" href="https://wire.lgcns.com/jira/browse/SSMPP002-2970">SSMPP002-2970</a>
+</td>
+                                            <td class="components">                        RTD            </td>
+                                            <td class="summary"><p>
+                [ESOC9 RTD] Monitoring OC9 RTD Production
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2217590" rel="2217590" data-issuekey="SSMPP002-3291" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-3291" href="https://wire.lgcns.com/jira/browse/SSMPP002-3291">SSMPP002-3291</a>
+</td>
+                                            <td class="components">                        RTD            </td>
+                                            <td class="summary"><p>
+                [ESOC9 RTD] Testing RTD ELEC and ASSY rule development related to STO tray rate recalculation
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2216168" rel="2216168" data-issuekey="SSMPP002-3197" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-3197" href="https://wire.lgcns.com/jira/browse/SSMPP002-3197">SSMPP002-3197</a>
+</td>
+                                            <td class="components">                        CIM            </td>
+                                            <td class="summary"><p>
+                [ESHM CIM] Analizing the trigger of HCACK 2 in CNV B1ACNV13301
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2216107" rel="2216107" data-issuekey="SSMPP002-3193" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-3193" href="https://wire.lgcns.com/jira/browse/SSMPP002-3193">SSMPP002-3193</a>
+</td>
+                                            <td class="components">                        eIoT            </td>
+                                            <td class="summary"><p>
+                [ESNJ eIoT] 202509 4th Week - Data Collection Monitoring Building 1,5,7
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2219201" rel="2219201" data-issuekey="SSMPP002-3409" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-3409" href="https://wire.lgcns.com/jira/browse/SSMPP002-3409">SSMPP002-3409</a>
+</td>
+                                            <td class="components">                        eIoT            </td>
+                                            <td class="summary"><p>
+                [ESNJ eIoT] 202509 5th Week - Data Collection Monitoring Building 8 &amp; 9
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2220060" rel="2220060" data-issuekey="SSMPP002-3602" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-3602" href="https://wire.lgcns.com/jira/browse/SSMPP002-3602">SSMPP002-3602</a>
+</td>
+                                            <td class="components">                        eIoT            </td>
+                                            <td class="summary"><p>
+                [ESOC1 eIoT] 202509 5th Week - Data Collection Monitoring All Building
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2219099" rel="2219099" data-issuekey="SSMPP002-3408" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-3408" href="https://wire.lgcns.com/jira/browse/SSMPP002-3408">SSMPP002-3408</a>
+</td>
+                                            <td class="components">                        eIoT            </td>
+                                            <td class="summary"><p>
+                [ESOC2 eIoT] 202509 5th Week - Data Collection Monitoring Building 9
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2221736" rel="2221736" data-issuekey="SSMPP002-3798" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-3798" href="https://wire.lgcns.com/jira/browse/SSMPP002-3798">SSMPP002-3798</a>
+</td>
+                                            <td class="components">                        CIM            </td>
+                                            <td class="summary"><p>
+                [ESHG AMRC] AMR Multi Slot Testing OCV Map
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2219081" rel="2219081" data-issuekey="SSMPP002-3402" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-3402" href="https://wire.lgcns.com/jira/browse/SSMPP002-3402">SSMPP002-3402</a>
+</td>
+                                            <td class="components">                        eIoT            </td>
+                                            <td class="summary"><p>
+                [ESMI eIoT] 202509 5th Week - Data Collection Monitoring All Building
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2219084" rel="2219084" data-issuekey="SSMPP002-3403" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-3403" href="https://wire.lgcns.com/jira/browse/SSMPP002-3403">SSMPP002-3403</a>
+</td>
+                                            <td class="components">                        eIoT            </td>
+                                            <td class="summary"><p>
+                [ESHM eIoT] 202509 5th Week - Data Collection Monitoring All Building
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2219736" rel="2219736" data-issuekey="SSMPP002-3416" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-3416" href="https://wire.lgcns.com/jira/browse/SSMPP002-3416">SSMPP002-3416</a>
+</td>
+                                            <td class="components">                        eIoT            </td>
+                                            <td class="summary"><p>
+                [ESWA eIoT] 202509 5th Week - Data Collection Monitoring Building 1,2,3
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2221595" rel="2221595" data-issuekey="SSMPP002-3790" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-3790" href="https://wire.lgcns.com/jira/browse/SSMPP002-3790">SSMPP002-3790</a>
+</td>
+                                            <td class="components">                        eIoT            </td>
+                                            <td class="summary"><p>
+                [ESOC1 eIoT] 202510 1st Week - Data Collection Monitoring All Building
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2219547" rel="2219547" data-issuekey="SSMPP002-3414" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-3414" href="https://wire.lgcns.com/jira/browse/SSMPP002-3414">SSMPP002-3414</a>
+</td>
+                                            <td class="components">                        eIoT            </td>
+                                            <td class="summary"><p>
+                [ESNJ eIoT] 202509 5th Week - Data Collection Monitoring Building 1,5,7
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2221506" rel="2221506" data-issuekey="SSMPP002-3787" class="issuerow">
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-3787" href="https://wire.lgcns.com/jira/browse/SSMPP002-3787">SSMPP002-3787</a>
+</td>
+                                            <td class="components">                        eIoT            </td>
+                                            <td class="summary"><p>
+                [ESNJ eIoT] 202510 1st Week - Data Collection Monitoring Building 1,5,7
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2201058" rel="2201058" data-issuekey="SSMPP002-2916" class="issuerow">
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-2916" href="https://wire.lgcns.com/jira/browse/SSMPP002-2916">SSMPP002-2916</a>
+</td>
+                                            <td class="components">                        RTD            </td>
+                                            <td class="summary"><p>
+                [ESOC9 RTD] Add RTD Logic for Transferring Can Material Tray from MGV Port
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2196855" rel="2196855" data-issuekey="SSMPP002-2866" class="issuerow">
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-2866" href="https://wire.lgcns.com/jira/browse/SSMPP002-2866">SSMPP002-2866</a>
+</td>
+                                            <td class="components">                        RTD            </td>
+                                            <td class="summary"><p>
+                [ESOC9 RTD] Add RTD Logic to Check PET Line and Project Name for Empty Bobbin Supply to R/W Coater
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2198951" rel="2198951" data-issuekey="SSMPP002-2888" class="issuerow">
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-2888" href="https://wire.lgcns.com/jira/browse/SSMPP002-2888">SSMPP002-2888</a>
+</td>
+                                            <td class="components">                        RTD            </td>
+                                            <td class="summary"><p>
+                [ESOC9 RTD] Add RTD Logic to Check Lane ID and Project Name for Full Bobbin Supply to U/W
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2198302" rel="2198302" data-issuekey="SSMPP002-2878" class="issuerow">
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-2878" href="https://wire.lgcns.com/jira/browse/SSMPP002-2878">SSMPP002-2878</a>
+</td>
+                                            <td class="components">                        HMI            </td>
+                                            <td class="summary"><p>
+                [ESHM HMI] Add conveyor state in all assembly page
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2199247" rel="2199247" data-issuekey="SSMPP002-2893" class="issuerow">
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-2893" href="https://wire.lgcns.com/jira/browse/SSMPP002-2893">SSMPP002-2893</a>
+</td>
+                                            <td class="components">                        HMI            </td>
+                                            <td class="summary"><p>
+                [ESHM HMI]  Create AGV path in Electrode page
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2189373" rel="2189373" data-issuekey="SSMPP002-2593" class="issuerow">
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-2593" href="https://wire.lgcns.com/jira/browse/SSMPP002-2593">SSMPP002-2593</a>
+</td>
+                                            <td class="components">                        HMI            </td>
+                                            <td class="summary"><p>
+                [ESHM HMI] Modify Mixer Transfer Monitoring Page
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2189323" rel="2189323" data-issuekey="SSMPP002-2590" class="issuerow">
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-2590" href="https://wire.lgcns.com/jira/browse/SSMPP002-2590">SSMPP002-2590</a>
+</td>
+                                            <td class="components">                        HMI            </td>
+                                            <td class="summary"><p>
+                [ESHM HMI] Equipment Trouble List Pop Up in Formation Page
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2205778" rel="2205778" data-issuekey="SSMPP002-2979" class="issuerow">
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-2979" href="https://wire.lgcns.com/jira/browse/SSMPP002-2979">SSMPP002-2979</a>
+</td>
+                                            <td class="components">                        HMI            </td>
+                                            <td class="summary"><p>
+                [ESHM HMI]  Add Packaging Conveyor State in Assembly Page
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2205788" rel="2205788" data-issuekey="SSMPP002-2980" class="issuerow">
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-2980" href="https://wire.lgcns.com/jira/browse/SSMPP002-2980">SSMPP002-2980</a>
+</td>
+                                            <td class="components">                        HMI            </td>
+                                            <td class="summary"><p>
+                [ESHM HMI]  Show crane status for dual crane stocker
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2217575" rel="2217575" data-issuekey="SSMPP002-3285" class="issuerow">
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-3285" href="https://wire.lgcns.com/jira/browse/SSMPP002-3285">SSMPP002-3285</a>
+</td>
+                                            <td class="components">                        RTD            </td>
+                                            <td class="summary"><p>
+                [ESGM2 RTD] Modify STO tray rate calculation to send empty tray from CNV
+    </p>
+</td>
+                    </tr>
+
+
+                <tr id="issuerow2217584" rel="2217584" data-issuekey="SSMPP002-3287" class="issuerow">
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-3287" href="https://wire.lgcns.com/jira/browse/SSMPP002-3287">SSMPP002-3287</a>
+</td>
+                                            <td class="components">                        CIM            </td>
+                                            <td class="summary"><p>
+                [ESGM2 CIM] Fix CNVC 1.0 bug due to ezControl exception in log files
+    </p>
+</td>
+                    </tr>
+                </tbody>
+    </table>
+    </issuetable-web-component>
+    <div class="end-of-stable-message"></div>
+            <table border="1" >
+<tr>
+    <td bgcolor="#dddddd" colspan="5"><font size="1">
+        Generated at Mon Oct 06 12:14:20 KST 2025 by Mahfudin 선임/PMO &amp; QA Team using Jira 9.12.10#9120010-sha1:3b20ee34958dbedd3d6f3418ef74b9ccb7acf6ef.
+    </font></td>
+</tr>
+</table>
+
+</body>
+</html>

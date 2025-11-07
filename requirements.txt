@@ -1,0 +1,8 @@
+plotly
+openpyxl
+streamlit_elements
+logo
+dotenv
+rerun
+streamlit
+pandas

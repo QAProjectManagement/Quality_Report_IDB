@@ -1,0 +1,1566 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<title>WIRE-Work</title>
+<style type="text/css">
+table {
+    mso-displayed-decimal-separator:"\.";
+    mso-displayed-thousand-separator:"\,";
+}
+body
+{
+    margin: 0px;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    color:black;
+}
+
+</style>
+<META HTTP-EQUIV="Content-Type" Content="application/vnd.ms-excel; charset=UTF-8">
+<!-- JRA-7598 - ensure fields (e.g. description) occupy only one cell - even fields containing newlines. -->
+<!--
+Vertical align all cells to the top, in order to align all issue rows of issuetable to the top,
+since Excel does not use or save the css files it is hardcoded here.
+-->
+<style>
+@page
+{
+mso-page-orientation:landscape;
+margin:.25in .25in .5in .25in;
+mso-header-margin:.5in;
+mso-footer-margin:.25in;
+mso-footer-data:"&R&P of &N";
+mso-horizontal-page-align:center;
+mso-vertical-page-align:center;
+}
+
+td.issuekey,
+td.issuetype,
+td.status {
+    mso-style-parent: "";
+    mso-number-format: \@;
+    text-align: left;
+}
+br
+{
+    mso-data-placement:same-cell;
+}
+
+td
+{
+    vertical-align: top;
+}
+</style>
+
+<!--[if gte mso 9]><xml>
+<x:ExcelWorkbook>
+<x:ExcelWorksheets>
+<x:ExcelWorksheet>
+<x:Name>general_report</x:Name>
+<x:WorksheetOptions>
+<x:Print>
+<x:ValidPrinterInfo/>
+</x:Print>
+</x:WorksheetOptions>
+</x:ExcelWorksheet>
+</x:ExcelWorksheets>
+</x:ExcelWorkbook>
+</xml><![endif]-->
+</head>
+<body>
+
+<table border="1">
+    <tr bgcolor="#A50034" height="48">
+        <td colspan="8">
+            <img src="https://wire.lgcns.com/jira/jira-logo-scaled.png" width="181" height="48" border="0" alt="WIRE-Work">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="8">
+            <a href="https://wire.lgcns.com/jira/issues/?jql=project+%3D+SSMPP003+AND+Sprint+in+%287027%2C+7028%2C+8313%29+AND+%28created+%3E%3D+2025-09-01+AND+created+%3C%3D+2025-10-03+OR+updated+%3E%3D+2025-09-01+AND+updated+%3C%3D+2025-10-03+OR+resolved+%3E%3D+2025-09-01+AND+resolved+%3C%3D+2025-10-03%29+ORDER+BY+key+ASC%2C+updated+ASC">WIRE-Work</a>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="8">
+            Displaying <strong>70</strong> issues at <strong>2025-10-06 12:58 PM</strong>.
+        </td>
+    </tr>
+</table>
+
+
+
+
+                            <issuetable-web-component data-content="issues">
+                <table id="issuetable"  border="1" cellpadding="3" cellspacing="1" width="100%">
+                        <thead>
+        <tr class="rowHeader">
+            
+                                                            <th scope="col" class="colHeaderLink headerrow-customfield_10104" data-id="customfield_10104">
+                            Sprint
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-issuekey" data-id="issuekey">
+                            Key
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-issuetype" data-id="issuetype">
+                            Issue Type
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-summary" data-id="summary">
+                            Summary
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-status" data-id="status">
+                            Status
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-created" data-id="created">
+                            Created
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-resolutiondate" data-id="resolutiondate">
+                            Resolved
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-updated" data-id="updated">
+                            Updated
+                                                    </th>
+                                                                    </tr>
+    </thead>
+    <tbody>
+                    
+
+                <tr id="issuerow2065404" rel="2065404" data-issuekey="SSMPP003-93" class="issuerow">
+                                            <td class="customfield_10104">Sprint 6</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-93" href="https://wire.lgcns.com/jira/browse/SSMPP003-93">SSMPP003-93</a>
+</td>
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="summary"><p>
+                View Application Detail
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-03-19 5:24 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="updated"> 2025-09-01 7:01 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2180577" rel="2180577" data-issuekey="SSMPP003-466" class="issuerow">
+                                            <td class="customfield_10104">Sprint 6</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-466" href="https://wire.lgcns.com/jira/browse/SSMPP003-466">SSMPP003-466</a>
+</td>
+                                            <td class="issuetype">    부작업
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">SSMPP003-94</span>
+                Backend: External Job Application Retrieval
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-08-05 10:25 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="updated"> 2025-09-01 7:47 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2193617" rel="2193617" data-issuekey="SSMPP003-509" class="issuerow">
+                                            <td class="customfield_10104">Sprint 6</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-509" href="https://wire.lgcns.com/jira/browse/SSMPP003-509">SSMPP003-509</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                The behavior of &#39;Activate Account&#39; after user create a new account in Job Portal External is not correct 
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-08-21 1:12 PM </td>
+                                            <td class="resolutiondate"> 2025-09-01 6:54 PM </td>
+                                            <td class="updated"> 2025-09-04 12:48 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2201767" rel="2201767" data-issuekey="SSMPP003-516" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-516" href="https://wire.lgcns.com/jira/browse/SSMPP003-516">SSMPP003-516</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                The status of job request is no &#39;Draft&#39; when save as Draft
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-02 5:58 PM </td>
+                                            <td class="resolutiondate"> 2025-09-12 3:57 PM </td>
+                                            <td class="updated"> 2025-09-19 4:50 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2201782" rel="2201782" data-issuekey="SSMPP003-517" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-517" href="https://wire.lgcns.com/jira/browse/SSMPP003-517">SSMPP003-517</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                There is no validation/restriction of future month in &#39;Working Experience&#39; and &#39;Education&#39; in Job Portal External
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-02 6:28 PM </td>
+                                            <td class="resolutiondate"> 2025-09-09 12:19 PM </td>
+                                            <td class="updated"> 2025-09-19 4:50 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2201787" rel="2201787" data-issuekey="SSMPP003-518" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-518" href="https://wire.lgcns.com/jira/browse/SSMPP003-518">SSMPP003-518</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                The total years of Experience between summary panel and the details are not sync
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-02 6:34 PM </td>
+                                            <td class="resolutiondate"> 2025-09-09 12:39 PM </td>
+                                            <td class="updated"> 2025-09-19 4:50 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2202210" rel="2202210" data-issuekey="SSMPP003-519" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-519" href="https://wire.lgcns.com/jira/browse/SSMPP003-519">SSMPP003-519</a>
+</td>
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="summary"><p>
+                Implement &quot;Waiting Leader Approval&quot; Status to Gate HR Visibility
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-03 1:30 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="updated"> 2025-09-17 6:39 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2202291" rel="2202291" data-issuekey="SSMPP003-520" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-520" href="https://wire.lgcns.com/jira/browse/SSMPP003-520">SSMPP003-520</a>
+</td>
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="summary"><p>
+                Replace Old Table with New Advanced Table
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-03 3:47 PM </td>
+                                            <td class="resolutiondate"> 2025-09-17 6:39 PM </td>
+                                            <td class="updated"> 2025-09-17 6:39 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2202461" rel="2202461" data-issuekey="SSMPP003-521" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-521" href="https://wire.lgcns.com/jira/browse/SSMPP003-521">SSMPP003-521</a>
+</td>
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="summary"><p>
+                Filter by Date Range in Advanced Table
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-03 5:33 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="updated"> 2025-09-19 5:10 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2202478" rel="2202478" data-issuekey="SSMPP003-522" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-522" href="https://wire.lgcns.com/jira/browse/SSMPP003-522">SSMPP003-522</a>
+</td>
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="summary"><p>
+                Export Table Data
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-03 6:02 PM </td>
+                                            <td class="resolutiondate"> 2025-09-23 10:31 AM </td>
+                                            <td class="updated"> 2025-09-23 10:31 AM </td>
+                    </tr>
+
+
+                <tr id="issuerow2202843" rel="2202843" data-issuekey="SSMPP003-523" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-523" href="https://wire.lgcns.com/jira/browse/SSMPP003-523">SSMPP003-523</a>
+</td>
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="summary"><p>
+                [FE] Migrate table job request and job posting
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;canceled&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;canceled&lt;/span&gt;" tabindex="0">canceled</span>    </td>
+                                            <td class="created"> 2025-09-04 10:28 AM </td>
+                                            <td class="resolutiondate"> 2025-09-04 10:30 AM </td>
+                                            <td class="updated"> 2025-09-04 10:30 AM </td>
+                    </tr>
+
+
+                <tr id="issuerow2202844" rel="2202844" data-issuekey="SSMPP003-524" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-524" href="https://wire.lgcns.com/jira/browse/SSMPP003-524">SSMPP003-524</a>
+</td>
+                                            <td class="issuetype">    부작업
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">SSMPP003-520</span>
+                [FE] Migrate table job posting
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-04 10:30 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="updated"> 2025-09-17 6:39 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2202845" rel="2202845" data-issuekey="SSMPP003-525" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-525" href="https://wire.lgcns.com/jira/browse/SSMPP003-525">SSMPP003-525</a>
+</td>
+                                            <td class="issuetype">    부작업
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">SSMPP003-520</span>
+                [FE] Pagination filter on posting table 
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-04 10:31 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="updated"> 2025-09-17 6:39 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2202846" rel="2202846" data-issuekey="SSMPP003-526" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-526" href="https://wire.lgcns.com/jira/browse/SSMPP003-526">SSMPP003-526</a>
+</td>
+                                            <td class="issuetype">    부작업
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">SSMPP003-521</span>
+                [FE] Slicing UI Date filter on job request and job posting table
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-04 10:32 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="updated"> 2025-09-17 6:39 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2203059" rel="2203059" data-issuekey="SSMPP003-527" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-527" href="https://wire.lgcns.com/jira/browse/SSMPP003-527">SSMPP003-527</a>
+</td>
+                                            <td class="issuetype">    부작업
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">SSMPP003-519</span>
+                [FE] Implement Waiting Leader for approval
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-04 1:14 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="updated"> 2025-09-17 6:39 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2204463" rel="2204463" data-issuekey="SSMPP003-528" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-528" href="https://wire.lgcns.com/jira/browse/SSMPP003-528">SSMPP003-528</a>
+</td>
+                                            <td class="issuetype">    부작업
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">SSMPP003-521</span>
+                Backend: Implement Date FIlter for Job Request
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-08 10:19 AM </td>
+                                            <td class="resolutiondate"> 2025-09-11 3:56 PM </td>
+                                            <td class="updated"> 2025-09-11 3:56 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2204464" rel="2204464" data-issuekey="SSMPP003-529" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-529" href="https://wire.lgcns.com/jira/browse/SSMPP003-529">SSMPP003-529</a>
+</td>
+                                            <td class="issuetype">    부작업
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">SSMPP003-521</span>
+                Backend: Implement Date FIlter for Job Posting
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-08 10:19 AM </td>
+                                            <td class="resolutiondate"> 2025-09-11 3:56 PM </td>
+                                            <td class="updated"> 2025-09-11 3:56 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2204466" rel="2204466" data-issuekey="SSMPP003-530" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-530" href="https://wire.lgcns.com/jira/browse/SSMPP003-530">SSMPP003-530</a>
+</td>
+                                            <td class="issuetype">    부작업
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">SSMPP003-521</span>
+                Backend: Implement Date Filter for Applicant Mgmt
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-08 10:20 AM </td>
+                                            <td class="resolutiondate"> 2025-09-11 3:56 PM </td>
+                                            <td class="updated"> 2025-09-11 3:56 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2204469" rel="2204469" data-issuekey="SSMPP003-532" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-532" href="https://wire.lgcns.com/jira/browse/SSMPP003-532">SSMPP003-532</a>
+</td>
+                                            <td class="issuetype">    부작업
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">SSMPP003-519</span>
+                Backend: Implement New Status for Job Request
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-08 10:21 AM </td>
+                                            <td class="resolutiondate"> 2025-09-11 3:56 PM </td>
+                                            <td class="updated"> 2025-09-11 3:56 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2204474" rel="2204474" data-issuekey="SSMPP003-533" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-533" href="https://wire.lgcns.com/jira/browse/SSMPP003-533">SSMPP003-533</a>
+</td>
+                                            <td class="issuetype">    부작업
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">SSMPP003-520</span>
+                Backend: Implement Pagination and FIlter for Job Request
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-08 10:25 AM </td>
+                                            <td class="resolutiondate"> 2025-09-11 3:56 PM </td>
+                                            <td class="updated"> 2025-09-11 3:56 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2204475" rel="2204475" data-issuekey="SSMPP003-534" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-534" href="https://wire.lgcns.com/jira/browse/SSMPP003-534">SSMPP003-534</a>
+</td>
+                                            <td class="issuetype">    부작업
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">SSMPP003-520</span>
+                Backend: Implement Pagination and FIlter for Job Posting
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-08 10:25 AM </td>
+                                            <td class="resolutiondate"> 2025-09-11 3:56 PM </td>
+                                            <td class="updated"> 2025-09-11 3:56 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2204842" rel="2204842" data-issuekey="SSMPP003-535" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-535" href="https://wire.lgcns.com/jira/browse/SSMPP003-535">SSMPP003-535</a>
+</td>
+                                            <td class="issuetype">    부작업
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">SSMPP003-522</span>
+                [FE] Slicing Export UI  
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-08 11:19 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="updated"> 2025-09-23 10:30 AM </td>
+                    </tr>
+
+
+                <tr id="issuerow2204843" rel="2204843" data-issuekey="SSMPP003-536" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-536" href="https://wire.lgcns.com/jira/browse/SSMPP003-536">SSMPP003-536</a>
+</td>
+                                            <td class="issuetype">    부작업
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">SSMPP003-522</span>
+                [FE] API Integration Export Feature
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-08 11:19 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="updated"> 2025-09-23 10:30 AM </td>
+                    </tr>
+
+
+                <tr id="issuerow2204847" rel="2204847" data-issuekey="SSMPP003-537" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-537" href="https://wire.lgcns.com/jira/browse/SSMPP003-537">SSMPP003-537</a>
+</td>
+                                            <td class="issuetype">    부작업
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">SSMPP003-521</span>
+                [FE] API Integration date filter on job posting table
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-08 11:22 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="updated"> 2025-09-17 6:40 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2205137" rel="2205137" data-issuekey="SSMPP003-538" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-538" href="https://wire.lgcns.com/jira/browse/SSMPP003-538">SSMPP003-538</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                There is no highlighted field when skills inputted more than 5 in Job Request &amp; Job Posting 
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-08 3:48 PM </td>
+                                            <td class="resolutiondate"> 2025-09-16 6:38 PM </td>
+                                            <td class="updated"> 2025-09-19 11:58 AM </td>
+                    </tr>
+
+
+                <tr id="issuerow2205167" rel="2205167" data-issuekey="SSMPP003-539" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-539" href="https://wire.lgcns.com/jira/browse/SSMPP003-539">SSMPP003-539</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                There is a different behavior when user doesn&#39;t input space or enter while input &#39;Responsibility&#39;, &#39;Requirements&#39;, &#39;Notes&#39; (Maximum character of sections in job details is 217 char)
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-08 4:17 PM </td>
+                                            <td class="resolutiondate"> 2025-09-19 6:14 PM </td>
+                                            <td class="updated"> 2025-09-19 6:14 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2205209" rel="2205209" data-issuekey="SSMPP003-541" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-541" href="https://wire.lgcns.com/jira/browse/SSMPP003-541">SSMPP003-541</a>
+</td>
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="summary"><p>
+                Filter by Status in Advanced Table
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-08 4:49 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="updated"> 2025-09-18 4:24 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2205193" rel="2205193" data-issuekey="SSMPP003-542" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-542" href="https://wire.lgcns.com/jira/browse/SSMPP003-542">SSMPP003-542</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                The fields &#39;Budget Minimum - Budget Maximum&#39; has no minimum value
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-08 5:01 PM </td>
+                                            <td class="resolutiondate"> 2025-09-12 7:20 PM </td>
+                                            <td class="updated"> 2025-09-19 11:58 AM </td>
+                    </tr>
+
+
+                <tr id="issuerow2205270" rel="2205270" data-issuekey="SSMPP003-543" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-543" href="https://wire.lgcns.com/jira/browse/SSMPP003-543">SSMPP003-543</a>
+</td>
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="summary"><p>
+                Applicant Registration – Global Phone Number Input Validation
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-08 5:36 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="updated"> 2025-09-17 3:13 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2205700" rel="2205700" data-issuekey="SSMPP003-544" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-544" href="https://wire.lgcns.com/jira/browse/SSMPP003-544">SSMPP003-544</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                The &#39;View Applicants&#39; in Job Posting is not working well when redirected automated to &#39;Applicant Management&#39;
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-09 10:36 AM </td>
+                                            <td class="resolutiondate"> 2025-09-18 6:20 PM </td>
+                                            <td class="updated"> 2025-09-19 4:50 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2207038" rel="2207038" data-issuekey="SSMPP003-545" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-545" href="https://wire.lgcns.com/jira/browse/SSMPP003-545">SSMPP003-545</a>
+</td>
+                                            <td class="issuetype">    Test
+</td>
+                                            <td class="summary"><p>
+                Verify Implement &quot;Waiting Leader Approval&quot; Status to Gate HR Visibility
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-10 3:59 PM </td>
+                                            <td class="resolutiondate"> 2025-09-16 6:31 PM </td>
+                                            <td class="updated"> 2025-09-16 6:31 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2207085" rel="2207085" data-issuekey="SSMPP003-546" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-546" href="https://wire.lgcns.com/jira/browse/SSMPP003-546">SSMPP003-546</a>
+</td>
+                                            <td class="issuetype">    Test
+</td>
+                                            <td class="summary"><p>
+                Verify Filter by Date Range in Advanced Table
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-10 4:47 PM </td>
+                                            <td class="resolutiondate"> 2025-09-19 5:10 PM </td>
+                                            <td class="updated"> 2025-09-19 5:10 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2207653" rel="2207653" data-issuekey="SSMPP003-547" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-547" href="https://wire.lgcns.com/jira/browse/SSMPP003-547">SSMPP003-547</a>
+</td>
+                                            <td class="issuetype">    Test
+</td>
+                                            <td class="summary"><p>
+                Verify Filter by Status in Advanced Table
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-11 11:42 AM </td>
+                                            <td class="resolutiondate"> 2025-09-18 4:24 PM </td>
+                                            <td class="updated"> 2025-09-18 4:24 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2207804" rel="2207804" data-issuekey="SSMPP003-548" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-548" href="https://wire.lgcns.com/jira/browse/SSMPP003-548">SSMPP003-548</a>
+</td>
+                                            <td class="issuetype">    Test
+</td>
+                                            <td class="summary"><p>
+                Verify Export Table Data
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-11 12:29 PM </td>
+                                            <td class="resolutiondate"> 2025-09-29 4:43 PM </td>
+                                            <td class="updated"> 2025-09-29 4:43 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2207898" rel="2207898" data-issuekey="SSMPP003-549" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-549" href="https://wire.lgcns.com/jira/browse/SSMPP003-549">SSMPP003-549</a>
+</td>
+                                            <td class="issuetype">    Test
+</td>
+                                            <td class="summary"><p>
+                Verify Applicant Registration - Global Phone Number Input Validation
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-11 3:24 PM </td>
+                                            <td class="resolutiondate"> 2025-09-17 3:13 PM </td>
+                                            <td class="updated"> 2025-09-17 3:13 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2208071" rel="2208071" data-issuekey="SSMPP003-550" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-550" href="https://wire.lgcns.com/jira/browse/SSMPP003-550">SSMPP003-550</a>
+</td>
+                                            <td class="issuetype">    Test
+</td>
+                                            <td class="summary"><p>
+                Verify Replace Old Table with New Advanced Table
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-11 4:51 PM </td>
+                                            <td class="resolutiondate"> 2025-09-18 5:50 PM </td>
+                                            <td class="updated"> 2025-09-18 5:50 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2208704" rel="2208704" data-issuekey="SSMPP003-551" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-551" href="https://wire.lgcns.com/jira/browse/SSMPP003-551">SSMPP003-551</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                Delete action in Job Request&#39;s Draft is not working
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-12 4:22 PM </td>
+                                            <td class="resolutiondate"> 2025-09-18 6:06 PM </td>
+                                            <td class="updated"> 2025-09-18 6:06 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2209234" rel="2209234" data-issuekey="SSMPP003-552" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-552" href="https://wire.lgcns.com/jira/browse/SSMPP003-552">SSMPP003-552</a>
+</td>
+                                            <td class="issuetype">    부작업
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">SSMPP003-520</span>
+                [FE] Migrate table job request
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-15 11:06 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="updated"> 2025-09-17 6:39 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2209242" rel="2209242" data-issuekey="SSMPP003-553" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-553" href="https://wire.lgcns.com/jira/browse/SSMPP003-553">SSMPP003-553</a>
+</td>
+                                            <td class="issuetype">    부작업
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">SSMPP003-520</span>
+                [FE] Pagination filter on request table 
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-15 11:06 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="updated"> 2025-09-17 6:39 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2209255" rel="2209255" data-issuekey="SSMPP003-554" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-554" href="https://wire.lgcns.com/jira/browse/SSMPP003-554">SSMPP003-554</a>
+</td>
+                                            <td class="issuetype">    부작업
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">SSMPP003-521</span>
+                [FE] API Integration date filter on job request table
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-15 11:07 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="updated"> 2025-09-17 6:40 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2209280" rel="2209280" data-issuekey="SSMPP003-555" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-555" href="https://wire.lgcns.com/jira/browse/SSMPP003-555">SSMPP003-555</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                [FE] Bug showing total row number on table Job Req, Job Posting, and Applicant Management  
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-15 11:32 AM </td>
+                                            <td class="resolutiondate"> 2025-09-16 6:12 PM </td>
+                                            <td class="updated"> 2025-09-19 4:50 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2209398" rel="2209398" data-issuekey="SSMPP003-556" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-556" href="https://wire.lgcns.com/jira/browse/SSMPP003-556">SSMPP003-556</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                The message to user is not correct when submit job request without approval and when the approval attachment submitted
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-15 12:27 PM </td>
+                                            <td class="resolutiondate"> 2025-09-16 6:27 PM </td>
+                                            <td class="updated"> 2025-09-19 4:50 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2209537" rel="2209537" data-issuekey="SSMPP003-557" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-557" href="https://wire.lgcns.com/jira/browse/SSMPP003-557">SSMPP003-557</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                The job request list is not refresh automatically after user create a new one
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-15 1:16 PM </td>
+                                            <td class="resolutiondate"> 2025-09-16 6:20 PM </td>
+                                            <td class="updated"> 2025-09-16 6:20 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2209865" rel="2209865" data-issuekey="SSMPP003-558" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-558" href="https://wire.lgcns.com/jira/browse/SSMPP003-558">SSMPP003-558</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                There is no &#39;Clearing the filter&#39; to resets the table, to show all results.
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-15 4:42 PM </td>
+                                            <td class="resolutiondate"> 2025-09-17 11:56 AM </td>
+                                            <td class="updated"> 2025-09-19 4:50 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2211650" rel="2211650" data-issuekey="SSMPP003-559" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-559" href="https://wire.lgcns.com/jira/browse/SSMPP003-559">SSMPP003-559</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                The pagination (Job Request) is not automatically reset to page 1 when filter status applied in page 2
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-17 12:06 PM </td>
+                                            <td class="resolutiondate"> 2025-09-18 4:20 PM </td>
+                                            <td class="updated"> 2025-09-18 4:20 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2212113" rel="2212113" data-issuekey="SSMPP003-560" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-560" href="https://wire.lgcns.com/jira/browse/SSMPP003-560">SSMPP003-560</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                Columns between Job Request and Job Posting is different
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-17 6:11 PM </td>
+                                            <td class="resolutiondate"> 2025-09-18 5:19 PM </td>
+                                            <td class="updated"> 2025-09-18 5:19 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2212122" rel="2212122" data-issuekey="SSMPP003-561" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-561" href="https://wire.lgcns.com/jira/browse/SSMPP003-561">SSMPP003-561</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                The message is not correct when user edit job request which has team leader approval attachment
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-17 6:34 PM </td>
+                                            <td class="resolutiondate"> 2025-09-18 1:47 PM </td>
+                                            <td class="updated"> 2025-09-18 1:47 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2212878" rel="2212878" data-issuekey="SSMPP003-562" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-562" href="https://wire.lgcns.com/jira/browse/SSMPP003-562">SSMPP003-562</a>
+</td>
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="summary"><p>
+                Default Sort for Job Requisitions
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-18 5:21 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="updated"> 2025-09-19 3:29 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2212879" rel="2212879" data-issuekey="SSMPP003-563" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-563" href="https://wire.lgcns.com/jira/browse/SSMPP003-563">SSMPP003-563</a>
+</td>
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="summary"><p>
+                Default Sort for Job Postings
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-18 5:21 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="updated"> 2025-09-19 4:04 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2212880" rel="2212880" data-issuekey="SSMPP003-564" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-564" href="https://wire.lgcns.com/jira/browse/SSMPP003-564">SSMPP003-564</a>
+</td>
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="summary"><p>
+                Default Sort for Applicant Management
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-18 5:21 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="updated"> 2025-09-19 4:25 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2213371" rel="2213371" data-issuekey="SSMPP003-565" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-565" href="https://wire.lgcns.com/jira/browse/SSMPP003-565">SSMPP003-565</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                The validation of &#39;Save Draft&#39; is not working correctly, when user save it in the second form of Adding Job Request (without input anything) 
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-19 12:39 PM </td>
+                                            <td class="resolutiondate"> 2025-09-19 5:50 PM </td>
+                                            <td class="updated"> 2025-09-19 5:50 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2213382" rel="2213382" data-issuekey="SSMPP003-566" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-566" href="https://wire.lgcns.com/jira/browse/SSMPP003-566">SSMPP003-566</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                The &#39;Responsibility&#39; in Job Posting reflects (Copying) to HR Notes 
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-19 1:08 PM </td>
+                                            <td class="resolutiondate"> 2025-09-19 6:04 PM </td>
+                                            <td class="updated"> 2025-09-19 6:04 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2214247" rel="2214247" data-issuekey="SSMPP003-567" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-567" href="https://wire.lgcns.com/jira/browse/SSMPP003-567">SSMPP003-567</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                Export Excel Job Request - The data / value of Hiring Manager is not prepopulated
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-22 11:19 AM </td>
+                                            <td class="resolutiondate"> 2025-09-26 12:37 PM </td>
+                                            <td class="updated"> 2025-09-26 12:37 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2214248" rel="2214248" data-issuekey="SSMPP003-568" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-568" href="https://wire.lgcns.com/jira/browse/SSMPP003-568">SSMPP003-568</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                Export Excel Job Posting - The data / value of column &#39;Update By&#39; is user code instead of using Name
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-22 11:21 AM </td>
+                                            <td class="resolutiondate"> 2025-09-26 3:27 PM </td>
+                                            <td class="updated"> 2025-09-26 3:27 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2214272" rel="2214272" data-issuekey="SSMPP003-569" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-569" href="https://wire.lgcns.com/jira/browse/SSMPP003-569">SSMPP003-569</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                Export Excel Job Posting - The data / value of column &#39;Requirement&#39; is not accurate when Requirement in UI contains Slash (/)
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-22 11:54 AM </td>
+                                            <td class="resolutiondate"> 2025-09-26 3:37 PM </td>
+                                            <td class="updated"> 2025-09-26 3:37 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2215024" rel="2215024" data-issuekey="SSMPP003-570" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-570" href="https://wire.lgcns.com/jira/browse/SSMPP003-570">SSMPP003-570</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                Export Excel Applicant Management - The data / value of column &#39;Feedback&#39; is not correct
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-22 6:24 PM </td>
+                                            <td class="resolutiondate"> 2025-09-26 5:21 PM </td>
+                                            <td class="updated"> 2025-09-26 5:26 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2215704" rel="2215704" data-issuekey="SSMPP003-571" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-571" href="https://wire.lgcns.com/jira/browse/SSMPP003-571">SSMPP003-571</a>
+</td>
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="summary"><p>
+                Job Requisition Visibility
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-23 11:14 AM </td>
+                                            <td class="resolutiondate"> 2025-09-29 3:20 PM </td>
+                                            <td class="updated"> 2025-09-29 3:20 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2215705" rel="2215705" data-issuekey="SSMPP003-572" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-572" href="https://wire.lgcns.com/jira/browse/SSMPP003-572">SSMPP003-572</a>
+</td>
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="summary"><p>
+                Job Posting Visibility and Editing Rights
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-23 11:14 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="updated"> 2025-09-29 12:28 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2215659" rel="2215659" data-issuekey="SSMPP003-573" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-573" href="https://wire.lgcns.com/jira/browse/SSMPP003-573">SSMPP003-573</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                Export Excel Applicant Management - The &#39;round&#39; in column &#39;Feedback&#39; is not correct
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-23 11:38 AM </td>
+                                            <td class="resolutiondate"> 2025-09-26 4:57 PM </td>
+                                            <td class="updated"> 2025-09-26 4:57 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2215997" rel="2215997" data-issuekey="SSMPP003-574" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-574" href="https://wire.lgcns.com/jira/browse/SSMPP003-574">SSMPP003-574</a>
+</td>
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="summary"><p>
+                Update Incorrect Email in &quot;Terms of Use&quot; PDF on Job Portal External
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-23 4:34 PM </td>
+                                            <td class="resolutiondate"> 2025-09-23 5:18 PM </td>
+                                            <td class="updated"> 2025-09-23 5:18 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2217407" rel="2217407" data-issuekey="SSMPP003-575" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-575" href="https://wire.lgcns.com/jira/browse/SSMPP003-575">SSMPP003-575</a>
+</td>
+                                            <td class="issuetype">    부작업
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">SSMPP003-571</span>
+                FE - Handle Job Request action buttons visibility
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-25 10:12 AM </td>
+                                            <td class="resolutiondate"> 2025-09-25 11:12 AM </td>
+                                            <td class="updated"> 2025-09-25 11:12 AM </td>
+                    </tr>
+
+
+                <tr id="issuerow2217409" rel="2217409" data-issuekey="SSMPP003-576" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-576" href="https://wire.lgcns.com/jira/browse/SSMPP003-576">SSMPP003-576</a>
+</td>
+                                            <td class="issuetype">    부작업
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">SSMPP003-572</span>
+                FE - Handle Job Posting action buttons visibility
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-25 10:12 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="updated"> 2025-09-29 12:29 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2218340" rel="2218340" data-issuekey="SSMPP003-577" class="issuerow">
+                                            <td class="customfield_10104">Sprint 8</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-577" href="https://wire.lgcns.com/jira/browse/SSMPP003-577">SSMPP003-577</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                FE - button view applicant hidden as a requestor
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-26 11:22 AM </td>
+                                            <td class="resolutiondate"> 2025-10-02 1:50 PM </td>
+                                            <td class="updated"> 2025-10-02 1:50 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2218344" rel="2218344" data-issuekey="SSMPP003-578" class="issuerow">
+                                            <td class="customfield_10104">Sprint 8</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-578" href="https://wire.lgcns.com/jira/browse/SSMPP003-578">SSMPP003-578</a>
+</td>
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="summary"><p>
+                Applicant Management: Global Search
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-26 11:30 AM </td>
+                                            <td class="resolutiondate"> 2025-10-02 3:51 PM </td>
+                                            <td class="updated"> 2025-10-02 3:51 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2218348" rel="2218348" data-issuekey="SSMPP003-579" class="issuerow">
+                                            <td class="customfield_10104">Sprint 8</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-579" href="https://wire.lgcns.com/jira/browse/SSMPP003-579">SSMPP003-579</a>
+</td>
+                                            <td class="issuetype">    부작업
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">SSMPP003-578</span>
+                FE - Add delay to filter input text on Applicant Management 
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-26 11:56 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="updated"> 2025-10-02 5:38 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2218917" rel="2218917" data-issuekey="SSMPP003-580" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-580" href="https://wire.lgcns.com/jira/browse/SSMPP003-580">SSMPP003-580</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                Export Excel Applicant Management - The data / value of column &#39;Education&#39; is not correct
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-26 5:21 PM </td>
+                                            <td class="resolutiondate"> 2025-09-29 1:18 PM </td>
+                                            <td class="updated"> 2025-09-29 1:18 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2218933" rel="2218933" data-issuekey="SSMPP003-581" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-581" href="https://wire.lgcns.com/jira/browse/SSMPP003-581">SSMPP003-581</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                Export Excel Applicant Management - The data / value of column &#39;Career&#39; is not correct
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-26 5:35 PM </td>
+                                            <td class="resolutiondate"> 2025-09-29 1:31 PM </td>
+                                            <td class="updated"> 2025-09-29 1:31 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2218964" rel="2218964" data-issuekey="SSMPP003-582" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-582" href="https://wire.lgcns.com/jira/browse/SSMPP003-582">SSMPP003-582</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                Export Excel Applicant Management - There is no information &#39;Degree&#39; in Education Column
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-26 6:08 PM </td>
+                                            <td class="resolutiondate"> 2025-09-29 12:49 PM </td>
+                                            <td class="updated"> 2025-09-29 12:49 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2219532" rel="2219532" data-issuekey="SSMPP003-583" class="issuerow">
+                                            <td class="customfield_10104">Sprint 7</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-583" href="https://wire.lgcns.com/jira/browse/SSMPP003-583">SSMPP003-583</a>
+</td>
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="summary"><p>
+                FE - Area Code wasn&#39;t sent in Job Posting External (Join Us Modal)
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;" tabindex="0">Closed</span>    </td>
+                                            <td class="created"> 2025-09-29 1:17 PM </td>
+                                            <td class="resolutiondate"> 2025-09-29 3:59 PM </td>
+                                            <td class="updated"> 2025-09-29 3:59 PM </td>
+                    </tr>
+
+
+                <tr id="issuerow2221165" rel="2221165" data-issuekey="SSMPP003-584" class="issuerow">
+                                            <td class="customfield_10104">Sprint 8</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP003-584" href="https://wire.lgcns.com/jira/browse/SSMPP003-584">SSMPP003-584</a>
+</td>
+                                            <td class="issuetype">    Task
+</td>
+                                            <td class="summary"><p>
+                FE - Add success message and redirection to Job Posting by email verification
+    </p>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="created"> 2025-09-30 4:01 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="updated"> 2025-10-03 4:15 PM </td>
+                    </tr>
+                </tbody>
+    </table>
+    </issuetable-web-component>
+    <div class="end-of-stable-message"></div>
+            <table border="1" >
+<tr>
+    <td bgcolor="#dddddd" colspan="8"><font size="1">
+        Generated at Mon Oct 06 12:58:00 KST 2025 by Sapta Sanjaya Professional/Application Development Team  using Jira 9.12.10#9120010-sha1:3b20ee34958dbedd3d6f3418ef74b9ccb7acf6ef.
+    </font></td>
+</tr>
+</table>
+
+</body>
+</html>

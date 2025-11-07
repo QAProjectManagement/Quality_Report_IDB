@@ -1,0 +1,171 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<title>Monthly | SF_Solution Quality DX (WIRE-Work)</title>
+<style type="text/css">
+table {
+    mso-displayed-decimal-separator:"\.";
+    mso-displayed-thousand-separator:"\,";
+}
+body
+{
+    margin: 0px;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    color:black;
+}
+
+</style>
+<META HTTP-EQUIV="Content-Type" Content="application/vnd.ms-excel; charset=UTF-8">
+<!-- JRA-7598 - ensure fields (e.g. description) occupy only one cell - even fields containing newlines. -->
+<!--
+Vertical align all cells to the top, in order to align all issue rows of issuetable to the top,
+since Excel does not use or save the css files it is hardcoded here.
+-->
+<style>
+@page
+{
+mso-page-orientation:landscape;
+margin:.25in .25in .5in .25in;
+mso-header-margin:.5in;
+mso-footer-margin:.25in;
+mso-footer-data:"&R&P of &N";
+mso-horizontal-page-align:center;
+mso-vertical-page-align:center;
+}
+
+td.issuekey,
+td.issuetype,
+td.status {
+    mso-style-parent: "";
+    mso-number-format: \@;
+    text-align: left;
+}
+br
+{
+    mso-data-placement:same-cell;
+}
+
+td
+{
+    vertical-align: top;
+}
+</style>
+
+<!--[if gte mso 9]><xml>
+<x:ExcelWorkbook>
+<x:ExcelWorksheets>
+<x:ExcelWorksheet>
+<x:Name>general_report</x:Name>
+<x:WorksheetOptions>
+<x:Print>
+<x:ValidPrinterInfo/>
+</x:Print>
+</x:WorksheetOptions>
+</x:ExcelWorksheet>
+</x:ExcelWorksheets>
+</x:ExcelWorkbook>
+</xml><![endif]-->
+</head>
+<body>
+
+<table border="1">
+    <tr bgcolor="#A50034" height="48">
+        <td colspan="9">
+            <img src="https://wire.lgcns.com/jira/jira-logo-scaled.png" width="181" height="48" border="0" alt="Monthly | SF_Solution Quality DX (WIRE-Work)">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="9">
+            <a href="https://wire.lgcns.com/jira/issues/?filter=53634">Monthly | SF_Solution Quality DX (WIRE-Work)</a>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="9">
+            Displaying <strong>1</strong> issues at <strong>2025-10-06 12:19 PM</strong>.
+        </td>
+    </tr>
+</table>
+
+
+
+
+                            <issuetable-web-component data-content="issues">
+                <table id="issuetable"  border="1" cellpadding="3" cellspacing="1" width="100%">
+                        <thead>
+        <tr class="rowHeader">
+            
+                                                            <th scope="col" class="colHeaderLink headerrow-issuekey" data-id="issuekey">
+                            Key
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-components" data-id="components">
+                            Component/s
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-issuetype" data-id="issuetype">
+                            Issue Type
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-status" data-id="status">
+                            Status
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-summary" data-id="summary">
+                            Summary
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-updated" data-id="updated">
+                            Updated
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-resolutiondate" data-id="resolutiondate">
+                            Resolved
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-labels" data-id="labels">
+                            Labels
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-customfield_10104" data-id="customfield_10104">
+                            Sprint
+                                                    </th>
+                                                                    </tr>
+    </thead>
+    <tbody>
+                    
+
+                <tr id="issuerow2193866" rel="2193866" data-issuekey="SSMPP002-2727" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SSMPP002-2727" href="https://wire.lgcns.com/jira/browse/SSMPP002-2727">SSMPP002-2727</a>
+</td>
+                                            <td class="components">                        SRPT            </td>
+                                            <td class="issuetype">    Story
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Done&lt;/span&gt;" tabindex="0">Done</span>    </td>
+                                            <td class="summary"><p>
+                Develop Chatbot Banner Shortcut
+    </p>
+</td>
+                                            <td class="updated"> 2025-08-28 12:31 PM </td>
+                                            <td class="resolutiondate"> 2025-08-28 12:31 PM </td>
+                                            <td class="labels">    </td>
+                                            <td class="customfield_10104">[SRPT] SRPT Task - Aug 25</td>
+                    </tr>
+                </tbody>
+    </table>
+    </issuetable-web-component>
+    <div class="end-of-stable-message"></div>
+            <table border="1" >
+<tr>
+    <td bgcolor="#dddddd" colspan="9"><font size="1">
+        Generated at Mon Oct 06 12:19:54 KST 2025 by Mahfudin 선임/PMO &amp; QA Team using Jira 9.12.10#9120010-sha1:3b20ee34958dbedd3d6f3418ef74b9ccb7acf6ef.
+    </font></td>
+</tr>
+</table>
+
+</body>
+</html>
