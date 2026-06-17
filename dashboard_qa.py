@@ -31,13 +31,30 @@ BASE_MONTH_ORDER = [
     "December",
 ]
 
-NUMERIC_COLUMNS = [COL_TOTAL_WORKLOAD, COL_COMPLETED_WORKLOAD, "Defect", COL_FIXED_DEFECT]
+# Column name constants
+COL_TOTAL_WORKLOAD = "Total Workload"
+COL_COMPLETED_WORKLOAD = "Completed Workload"
+COL_FIXED_DEFECT = "Fixed defect"
+COL_PROJECT_NAME = "Project Name"
+COL_IDB_TEAM = "IDB Team"
+COL_PIC = "Project Leader or PIC"
+COL_NO_OF_EMPLOYEE = "No of Employee"
+COL_SPRINT_SCHEDULE = "Sprint Schedule"
+COL_PRODUCTIVITY_RATE = "Productivity Rate"
+COL_DEFECT_DENSITY = "Defect Density"
+COL_DEFECT_CORRECTION_RATE = "Defect Correction Rate"
+COL_QUALITY_EVALUATION = "Quality Evaluation"
+COL_PRODUCTIVITY_EVALUATION = "Productivity Evaluation"
+COL_QUALITY_EVALUATION_NUMERIC = "Quality Evaluation Numeric"
+COL_PERCENTAGE = "Percentage %"
 
 # Evaluation label constants
 LABEL_STANDARD = "✅ Standard"
 LABEL_ISSUE = "⚠️ Issue"
 LABEL_RISK = "❌ Risk"
 LABEL_NO_TASKS = "❓ No Tasks"
+
+NUMERIC_COLUMNS = [COL_TOTAL_WORKLOAD, COL_COMPLETED_WORKLOAD, "Defect", COL_FIXED_DEFECT]
 
 NIVO_COLOR_MAP: Dict[str, str] = {
     LABEL_STANDARD: "#4CAF50",
@@ -61,24 +78,6 @@ QUALITY_SCORE_MAP: Dict[str, int] = {
 
 PADDING_STYLE = "8px 12px"
 HR_STYLE = "<hr style='border: 1px solid #808080;'>"
-
-# Column name constants
-COL_TOTAL_WORKLOAD = "Total Workload"
-COL_COMPLETED_WORKLOAD = "Completed Workload"
-COL_FIXED_DEFECT = "Fixed defect"
-COL_PROJECT_NAME = "Project Name"
-COL_IDB_TEAM = "IDB Team"
-COL_PIC = "Project Leader or PIC"
-COL_NO_OF_EMPLOYEE = "No of Employee"
-COL_SPRINT_SCHEDULE = "Sprint Schedule"
-COL_PRODUCTIVITY_RATE = "Productivity Rate"
-COL_DEFECT_DENSITY = "Defect Density"
-COL_DEFECT_CORRECTION_RATE = "Defect Correction Rate"
-COL_QUALITY_EVALUATION = "Quality Evaluation"
-COL_PRODUCTIVITY_EVALUATION = "Productivity Evaluation"
-COL_QUALITY_EVALUATION_NUMERIC = "Quality Evaluation Numeric"
-COL_PERCENTAGE = "Percentage %"
-
 
 
 def describe_filters(
