@@ -253,6 +253,16 @@ header[data-testid="stHeader"] {
     border-bottom: 1px solid rgba(99, 102, 241, 0.15) !important;
 }
 
+/* ── Dataframe / Table dark styling ── */
+[data-testid="stDataFrame"] > div {
+    background-color: #13162b !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(99, 102, 241, 0.2) !important;
+}
+[data-testid="stDataFrame"] iframe {
+    background-color: #13162b !important;
+}
+
 /* ── Streamlit Elements (nivo) wrapper ── */
 [data-testid="stCustomComponentV1"] iframe {
     background: transparent !important;
