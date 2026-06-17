@@ -106,6 +106,14 @@ def show_login() -> bool:
     /* Hide hamburger menu & footer on login */
     #MainMenu, footer { visibility: hidden; }
 
+    /* Logo */
+    [data-testid="stImage"] img,
+    [data-testid="stImage"] {
+        background-color: white !important;
+        padding: 8px !important;
+        border-radius: 8px !important;
+    }
+
     /* Card container */
     [data-testid="stForm"] {
         background: rgba(255, 255, 255, 0.03) !important;

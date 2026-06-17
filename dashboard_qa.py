@@ -234,6 +234,14 @@ html, body, [class*="css"] {
     border-left: 4px solid #6366f1 !important;
 }
 
+/* ── Logo ── */
+[data-testid="stImage"] img,
+[data-testid="stImage"] {
+    background-color: white !important;
+    padding: 8px !important;
+    border-radius: 8px !important;
+}
+
 /* ── Scrollbar ── */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); border-radius: 3px; }
