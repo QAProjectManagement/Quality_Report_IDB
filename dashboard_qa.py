@@ -235,8 +235,11 @@ html, body, [class*="css"] {
 }
 
 /* ── Logo ── */
-[data-testid="stImage"] img,
 [data-testid="stImage"] {
+    display: flex !important;
+    justify-content: center !important;
+}
+[data-testid="stImage"] img {
     background-color: white !important;
     padding: 8px !important;
     border-radius: 8px !important;
