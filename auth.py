@@ -91,20 +91,86 @@ def show_login() -> bool:
     Display the login form and handle authentication.
     Returns True if user is authenticated.
     """
-    # If already authenticated
     if is_authenticated():
         return True
 
-    # Centered login layout
+    st.markdown("""
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    html, body, [class*="css"] { font-family: 'Inter', sans-serif !important; }
+
+    .stApp {
+        background: linear-gradient(135deg, #0f1117 0%, #1a1d2e 50%, #0f1117 100%) !important;
+    }
+
+    /* Hide hamburger menu & footer on login */
+    #MainMenu, footer { visibility: hidden; }
+
+    /* Card container */
+    [data-testid="stForm"] {
+        background: rgba(255, 255, 255, 0.03) !important;
+        border: 1px solid rgba(99, 102, 241, 0.3) !important;
+        border-radius: 20px !important;
+        padding: 2rem !important;
+        backdrop-filter: blur(20px) !important;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(99, 102, 241, 0.1) !important;
+    }
+
+    /* Input fields */
+    .stTextInput > div > div {
+        background: rgba(30, 35, 60, 0.8) !important;
+        border: 1px solid rgba(99, 102, 241, 0.3) !important;
+        border-radius: 10px !important;
+        color: #e2e8f0 !important;
+    }
+    .stTextInput > div > div:focus-within {
+        border-color: #6366f1 !important;
+        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15) !important;
+    }
+    .stTextInput label { color: #8892b0 !important; font-size: 0.78rem !important; font-weight: 500 !important; text-transform: uppercase !important; letter-spacing: 0.05em !important; }
+
+    /* Login button */
+    [data-testid="stFormSubmitButton"] button {
+        background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%) !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 10px !important;
+        font-weight: 600 !important;
+        font-size: 1rem !important;
+        width: 100% !important;
+        padding: 0.75rem !important;
+        transition: all 0.3s ease !important;
+        box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3) !important;
+    }
+    [data-testid="stFormSubmitButton"] button:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5) !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
     _, col_login, _ = st.columns([1, 2, 1])
     with col_login:
-        st.image("lgsm_logo.png", width=220)
-        st.title("Login - Quality Report LG SinarMas")
+        st.markdown("<div style='text-align:center; margin-bottom: 1.5rem;'>", unsafe_allow_html=True)
+        st.image("lgsm_logo.png", width=160)
+        st.markdown("</div>", unsafe_allow_html=True)
+
+        st.markdown("""
+        <div style='text-align:center; margin-bottom: 2rem;'>
+            <h1 style='font-size: 1.8rem; font-weight: 700;
+                background: linear-gradient(90deg, #a5b4fc, #818cf8);
+                -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+                background-clip: text; margin-bottom: 0.3rem;'>
+                IDB Quality Dashboard
+            </h1>
+            <p style='color: #64748b; font-size: 0.9rem; margin: 0;'>LG SinarMas — Sign in to continue</p>
+        </div>
+        """, unsafe_allow_html=True)
 
         with st.form("login_form"):
-            username = st.text_input("Username")
-            password = st.text_input("Password", type="password")
-            submit_button = st.form_submit_button("Login")
+            username = st.text_input("Username", placeholder="Enter your username")
+            password = st.text_input("Password", type="password", placeholder="Enter your password")
+            submit_button = st.form_submit_button("🔐  Sign In")
 
             if submit_button:
                 if validate_login(username, password):

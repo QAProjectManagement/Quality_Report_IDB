@@ -14,7 +14,12 @@ from dashboard_components.sm import load_component as load_sm_component
 from dashboard_components.weekly import load_component as load_weekly_component
 from dashboards.shared import MONTH_ABBREVIATIONS, render_dataframe
 
-st.set_page_config(page_title="IDB Quality Dashboard", layout="wide")
+st.set_page_config(
+    page_title="IDB Quality Dashboard",
+    page_icon="📊",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
 
 BASE_MONTH_ORDER = [
     "January",
@@ -77,7 +82,165 @@ QUALITY_SCORE_MAP: Dict[str, int] = {
 }
 
 PADDING_STYLE = "8px 12px"
-HR_STYLE = "<hr style='border: 1px solid #808080;'>"
+HR_STYLE = "<hr style='border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 1rem 0;'>"
+
+DASHBOARD_CSS = """
+<style>
+/* ── Google Font ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ── Global ── */
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* ── Dark App Background ── */
+.stApp {
+    background: linear-gradient(135deg, #0f1117 0%, #1a1d2e 50%, #0f1117 100%) !important;
+    background-attachment: fixed !important;
+}
+
+/* ── Sidebar ── */
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #13162b 0%, #0e1020 100%) !important;
+    border-right: 1px solid rgba(99, 102, 241, 0.2) !important;
+}
+[data-testid="stSidebar"] * {
+    color: #c8d0e8 !important;
+}
+[data-testid="stSidebar"] .stSelectbox label,
+[data-testid="stSidebar"] .stMultiSelect label {
+    color: #8892b0 !important;
+    font-size: 0.78rem !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+}
+[data-testid="stSidebar"] h2, 
+[data-testid="stSidebar"] h3 {
+    color: #a5b4fc !important;
+    font-weight: 600 !important;
+}
+
+/* ── Main Content Area ── */
+.main .block-container {
+    padding-top: 1.5rem !important;
+    padding-bottom: 2rem !important;
+    max-width: 1400px !important;
+}
+
+/* ── Page Title ── */
+.stApp h1 {
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
+    background: linear-gradient(90deg, #a5b4fc, #818cf8, #6366f1) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    margin-bottom: 0.5rem !important;
+}
+
+/* ── Section Headers (subheader / markdown h3) ── */
+.stApp h2 {
+    color: #c7d2fe !important;
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    margin-top: 0.5rem !important;
+}
+.stApp h3 {
+    color: #a5b4fc !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    margin-top: 0.2rem !important;
+}
+
+/* ── Metric Cards ── */
+[data-testid="stMetric"] {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(139, 92, 246, 0.08) 100%) !important;
+    border: 1px solid rgba(99, 102, 241, 0.25) !important;
+    border-radius: 14px !important;
+    padding: 1.2rem 1.4rem !important;
+    backdrop-filter: blur(10px) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+[data-testid="stMetric"]:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.2) !important;
+}
+[data-testid="stMetricLabel"] {
+    color: #8892b0 !important;
+    font-size: 0.78rem !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+}
+[data-testid="stMetricValue"] {
+    color: #e2e8f0 !important;
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+}
+
+/* ── DataFrames / Tables ── */
+[data-testid="stDataFrame"],
+.stDataFrame {
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(99, 102, 241, 0.2) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* ── Selectbox / Input ── */
+.stSelectbox > div > div,
+.stMultiSelect > div > div {
+    background: rgba(30, 35, 60, 0.8) !important;
+    border: 1px solid rgba(99, 102, 241, 0.3) !important;
+    border-radius: 8px !important;
+    color: #c8d0e8 !important;
+}
+
+/* ── Plotly Chart Containers ── */
+.stPlotlyChart {
+    background: rgba(30, 35, 60, 0.5) !important;
+    border: 1px solid rgba(99, 102, 241, 0.15) !important;
+    border-radius: 14px !important;
+    padding: 0.5rem !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+/* ── Nivo/Elements Container ── */
+.element-container iframe {
+    border-radius: 12px !important;
+}
+
+/* ── Download Button ── */
+.stDownloadButton button {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    padding: 0.5rem 1.2rem !important;
+    transition: all 0.2s ease !important;
+}
+.stDownloadButton button:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4) !important;
+}
+
+/* ── Alert / Info Boxes ── */
+.stAlert {
+    border-radius: 10px !important;
+    border-left: 4px solid #6366f1 !important;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: rgba(99, 102, 241, 0.5); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(99, 102, 241, 0.8); }
+</style>
+"""
 
 
 def describe_filters(
@@ -607,8 +770,10 @@ def main() -> None:
             st.stop()
         return
 
-    st.sidebar.image("lgsm_logo.png", width=200)
-    st.sidebar.header("Navigation")
+    st.markdown(DASHBOARD_CSS, unsafe_allow_html=True)
+
+    st.sidebar.image("lgsm_logo.png", width=180)
+    st.sidebar.markdown("### 🗂 Navigation")
 
     view_options = [
         ("SM", "SM Projects"),
