@@ -157,7 +157,10 @@ def show_login() -> bool:
     </style>
     """, unsafe_allow_html=True)
 
-    _, col_login, _ = st.columns([1, 2, 1])
+    # Vertical centering spacer
+    st.markdown("<br><br><br>", unsafe_allow_html=True)
+
+    _, col_login, _ = st.columns([1.5, 1.5, 1.5])
     with col_login:
         st.markdown("<div style='text-align:center; margin-bottom: 1.5rem;'>", unsafe_allow_html=True)
         st.image("lgsm_logo.png", width=160)
@@ -175,10 +178,11 @@ def show_login() -> bool:
         </div>
         """, unsafe_allow_html=True)
 
-        with st.form("login_form"):
+        with st.form("login_form", border=False):
             username = st.text_input("Username", placeholder="Enter your username")
             password = st.text_input("Password", type="password", placeholder="Enter your password")
-            submit_button = st.form_submit_button("🔐  Sign In")
+            st.markdown("<br>", unsafe_allow_html=True)
+            submit_button = st.form_submit_button("🔐  Sign In", use_container_width=True)
 
             if submit_button:
                 if validate_login(username, password):
