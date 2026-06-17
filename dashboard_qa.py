@@ -828,7 +828,6 @@ def main() -> None:
     if not st.session_state["logged_in"]:
         if not show_login():
             st.stop()
-        return
 
     st.markdown(DASHBOARD_CSS, unsafe_allow_html=True)
 
