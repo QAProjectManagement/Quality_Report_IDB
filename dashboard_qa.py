@@ -31,30 +31,54 @@ BASE_MONTH_ORDER = [
     "December",
 ]
 
-NUMERIC_COLUMNS = ["Total Workload", "Completed Workload", "Defect", "Fixed defect"]
+NUMERIC_COLUMNS = [COL_TOTAL_WORKLOAD, COL_COMPLETED_WORKLOAD, "Defect", COL_FIXED_DEFECT]
+
+# Evaluation label constants
+LABEL_STANDARD = "✅ Standard"
+LABEL_ISSUE = "⚠️ Issue"
+LABEL_RISK = "❌ Risk"
+LABEL_NO_TASKS = "❓ No Tasks"
 
 NIVO_COLOR_MAP: Dict[str, str] = {
-    "✅ Standard": "#4CAF50",
-    "⚠️ Issue": "#E0BC00",
-    "❌ Risk": "#F44336",
-    "❓ No Tasks": "#808080",
+    LABEL_STANDARD: "#4CAF50",
+    LABEL_ISSUE: "#E0BC00",
+    LABEL_RISK: "#F44336",
+    LABEL_NO_TASKS: "#808080",
 }
 
 LINE_COLOR_MAP: Dict[str, str] = {
-    "✅ Standard": "#4CAF50",
-    "⚠️ Issue": "#E0BC00",
-    "❌ Risk": "#F44336",
+    LABEL_STANDARD: "#4CAF50",
+    LABEL_ISSUE: "#E0BC00",
+    LABEL_RISK: "#F44336",
 }
 
 QUALITY_SCORE_MAP: Dict[str, int] = {
-    "✅ Standard": 3,
-    "⚠️ Issue": 2,
-    "❌ Risk": 1,
-    "❓ No Tasks": 0,
+    LABEL_STANDARD: 3,
+    LABEL_ISSUE: 2,
+    LABEL_RISK: 1,
+    LABEL_NO_TASKS: 0,
 }
 
 PADDING_STYLE = "8px 12px"
 HR_STYLE = "<hr style='border: 1px solid #808080;'>"
+
+# Column name constants
+COL_TOTAL_WORKLOAD = "Total Workload"
+COL_COMPLETED_WORKLOAD = "Completed Workload"
+COL_FIXED_DEFECT = "Fixed defect"
+COL_PROJECT_NAME = "Project Name"
+COL_IDB_TEAM = "IDB Team"
+COL_PIC = "Project Leader or PIC"
+COL_NO_OF_EMPLOYEE = "No of Employee"
+COL_SPRINT_SCHEDULE = "Sprint Schedule"
+COL_PRODUCTIVITY_RATE = "Productivity Rate"
+COL_DEFECT_DENSITY = "Defect Density"
+COL_DEFECT_CORRECTION_RATE = "Defect Correction Rate"
+COL_QUALITY_EVALUATION = "Quality Evaluation"
+COL_PRODUCTIVITY_EVALUATION = "Productivity Evaluation"
+COL_QUALITY_EVALUATION_NUMERIC = "Quality Evaluation Numeric"
+COL_PERCENTAGE = "Percentage %"
+
 
 
 def describe_filters(
@@ -103,27 +127,27 @@ def answer_dashboard_question(
     )
 
     total_workload = (
-        df_current["Total Workload"].sum() if "Total Workload" in df_current.columns else 0
+        df_current[COL_TOTAL_WORKLOAD].sum() if COL_TOTAL_WORKLOAD in df_current.columns else 0
     )
     completed_workload = (
-        df_current["Completed Workload"].sum()
-        if "Completed Workload" in df_current.columns
+        df_current[COL_COMPLETED_WORKLOAD].sum()
+        if COL_COMPLETED_WORKLOAD in df_current.columns
         else 0
     )
     avg_productivity = (
-        df_current["Productivity Rate"].mean()
-        if "Productivity Rate" in df_current.columns
+        df_current[COL_PRODUCTIVITY_RATE].mean()
+        if COL_PRODUCTIVITY_RATE in df_current.columns
         else float("nan")
     )
     avg_correction = (
-        df_current["Defect Correction Rate"].mean()
-        if "Defect Correction Rate" in df_current.columns
+        df_current[COL_DEFECT_CORRECTION_RATE].mean()
+        if COL_DEFECT_CORRECTION_RATE in df_current.columns
         else float("nan")
     )
 
     quality_counts = (
-        df_current["Quality Evaluation"].value_counts().to_dict()
-        if "Quality Evaluation" in df_current.columns
+        df_current[COL_QUALITY_EVALUATION].value_counts().to_dict()
+        if COL_QUALITY_EVALUATION in df_current.columns
         else {}
     )
 
@@ -162,12 +186,12 @@ def answer_dashboard_question(
 
     if "risk" in q:
         risk_rows = df_current[
-            df_current.get("Quality Evaluation", pd.Series(dtype=str)).str.contains("Risk", na=False)
-            | df_current.get("Productivity Evaluation", pd.Series(dtype=str)).str.contains("Risk", na=False)
+            df_current.get(COL_QUALITY_EVALUATION, pd.Series(dtype=str)).str.contains("Risk", na=False)
+            | df_current.get(COL_PRODUCTIVITY_EVALUATION, pd.Series(dtype=str)).str.contains("Risk", na=False)
         ]
         if risk_rows.empty:
             return f"Tidak ada proyek dengan status risiko pada {context_text}."
-        projects = ", ".join(sorted(risk_rows["Project Name"].astype(str).unique().tolist()))
+        projects = ", ".join(sorted(risk_rows[COL_PROJECT_NAME].astype(str).unique().tolist()))
         return f"Proyek dengan status risiko pada {context_text}: {projects}."
 
     summary = [
@@ -202,35 +226,35 @@ def evaluate_productivity(rate: float, total_workload: Any, completed_workload: 
     if (total_workload in (0, None) or pd.isna(total_workload)) and (
         completed_workload in (0, None) or pd.isna(completed_workload)
     ):
-        return "❓ No Tasks"
+        return LABEL_NO_TASKS
     if rate <= 70:
-        return "❌ Risk"
+        return LABEL_RISK
     if 70 < rate < 80:
-        return "⚠️ Issue"
-    return "✅ Standard"
+        return LABEL_ISSUE
+    return LABEL_STANDARD
 
 
 def evaluate_quality(density: Any, correction_rate: Any, defect_count: Any) -> str:
     if pd.isna(density) or pd.isna(correction_rate):
-        return "❓ No Tasks"
+        return LABEL_NO_TASKS
     if defect_count in (0, None) or pd.isna(defect_count):
-        return "✅ Standard"
+        return LABEL_STANDARD
     if correction_rate in (0, None) or pd.isna(correction_rate):
-        return "❌ Risk"
+        return LABEL_RISK
     if density >= 3 or correction_rate <= 70:
-        return "❌ Risk"
+        return LABEL_RISK
     if 2 <= density < 3 or (70 < correction_rate <= 80):
-        return "⚠️ Issue"
-    return "✅ Standard"
+        return LABEL_ISSUE
+    return LABEL_STANDARD
 
 
 def evaluate_quality_with_check(row: pd.Series) -> str:
-    productivity_eval = row.get("Productivity Evaluation")
-    if productivity_eval == "❓ No Tasks":
-        return "❓ No Tasks"
+    productivity_eval = row.get(COL_PRODUCTIVITY_EVALUATION)
+    if productivity_eval == LABEL_NO_TASKS:
+        return LABEL_NO_TASKS
     return evaluate_quality(
-        row.get("Defect Density"),
-        row.get("Defect Correction Rate"),
+        row.get(COL_DEFECT_DENSITY),
+        row.get(COL_DEFECT_CORRECTION_RATE),
         row.get("Defect"),
     )
 
@@ -257,11 +281,11 @@ def convert_numeric_columns(df: pd.DataFrame, columns: List[str]) -> pd.DataFram
 
 def add_calculated_columns(df: pd.DataFrame) -> pd.DataFrame:
     calculated_columns = [
-        "Productivity Rate",
-        "Defect Correction Rate",
-        "Defect Density",
-        "Productivity Evaluation",
-        "Quality Evaluation",
+        COL_PRODUCTIVITY_RATE,
+        COL_DEFECT_CORRECTION_RATE,
+        COL_DEFECT_DENSITY,
+        COL_PRODUCTIVITY_EVALUATION,
+        COL_QUALITY_EVALUATION,
     ]
 
     if df.empty:
@@ -272,25 +296,25 @@ def add_calculated_columns(df: pd.DataFrame) -> pd.DataFrame:
         return result
 
     result = df.copy()
-    result["Productivity Rate"] = result.apply(
-        lambda r: calculate_ffr(r.get("Completed Workload"), r.get("Total Workload")), axis=1
+    result[COL_PRODUCTIVITY_RATE] = result.apply(
+        lambda r: calculate_ffr(r.get(COL_COMPLETED_WORKLOAD), r.get(COL_TOTAL_WORKLOAD)), axis=1
     )
-    result["Defect Correction Rate"] = result.apply(
-        lambda r: calculate_dcr(r.get("Fixed defect"), r.get("Defect")), axis=1
+    result[COL_DEFECT_CORRECTION_RATE] = result.apply(
+        lambda r: calculate_dcr(r.get(COL_FIXED_DEFECT), r.get("Defect")), axis=1
     )
-    result["Defect Density"] = result.apply(
-        lambda r: (r.get("Defect") / r.get("Total Workload"))
-        if r.get("Total Workload") not in (None, 0) and not pd.isna(r.get("Total Workload"))
+    result[COL_DEFECT_DENSITY] = result.apply(
+        lambda r: (r.get("Defect") / r.get(COL_TOTAL_WORKLOAD))
+        if r.get(COL_TOTAL_WORKLOAD) not in (None, 0) and not pd.isna(r.get(COL_TOTAL_WORKLOAD))
         else 0,
         axis=1,
     )
-    result["Productivity Evaluation"] = result.apply(
+    result[COL_PRODUCTIVITY_EVALUATION] = result.apply(
         lambda r: evaluate_productivity(
-            r.get("Productivity Rate"), r.get("Total Workload"), r.get("Completed Workload")
+            r.get(COL_PRODUCTIVITY_RATE), r.get(COL_TOTAL_WORKLOAD), r.get(COL_COMPLETED_WORKLOAD)
         ),
         axis=1,
     )
-    result["Quality Evaluation"] = result.apply(evaluate_quality_with_check, axis=1)
+    result[COL_QUALITY_EVALUATION] = result.apply(evaluate_quality_with_check, axis=1)
     return result
 
 
@@ -326,17 +350,17 @@ def remove_empty_rows(df: pd.DataFrame) -> pd.DataFrame:
 
 def get_valid_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     df_clean = remove_empty_rows(df)
-    if df_clean.empty or not {"Project Name", "Total Workload"}.issubset(df_clean.columns):
+    if df_clean.empty or not {COL_PROJECT_NAME, COL_TOTAL_WORKLOAD}.issubset(df_clean.columns):
         return df_clean.iloc[0:0].copy()
-    return df_clean[df_clean["Project Name"].notna() & df_clean["Total Workload"].notna()].copy()
+    return df_clean[df_clean[COL_PROJECT_NAME].notna() & df_clean[COL_TOTAL_WORKLOAD].notna()].copy()
 
 
 def attach_quality_score(df: pd.DataFrame) -> pd.DataFrame:
     result = df.copy()
-    if "Quality Evaluation" not in result.columns:
-        result["Quality Evaluation Numeric"] = pd.NA
+    if COL_QUALITY_EVALUATION not in result.columns:
+        result[COL_QUALITY_EVALUATION_NUMERIC] = pd.NA
     else:
-        result["Quality Evaluation Numeric"] = result["Quality Evaluation"].map(QUALITY_SCORE_MAP)
+        result[COL_QUALITY_EVALUATION_NUMERIC] = result[COL_QUALITY_EVALUATION].map(QUALITY_SCORE_MAP)
     return result
 
 
@@ -420,31 +444,24 @@ def prepare_ffr_trend_data(
     x_col: str,
     order: List[str],
 ) -> pd.DataFrame:
-    if df is None or df.empty or "Total Workload" not in df.columns or "Completed Workload" not in df.columns or x_col not in df.columns:
-        return pd.DataFrame(columns=[x_col, "Productivity Rate"])
+    if df is None or df.empty or COL_TOTAL_WORKLOAD not in df.columns or COL_COMPLETED_WORKLOAD not in df.columns or x_col not in df.columns:
+        return pd.DataFrame(columns=[x_col, COL_PRODUCTIVITY_RATE])
 
     grouped = df.groupby(x_col, observed=True).agg(
-        total=("Total Workload", "sum"),
-        completed=("Completed Workload", "sum")
+        total=(COL_TOTAL_WORKLOAD, "sum"),
+        completed=(COL_COMPLETED_WORKLOAD, "sum")
     ).reset_index()
 
-    grouped["Productivity Rate"] = grouped.apply(
+    grouped[COL_PRODUCTIVITY_RATE] = grouped.apply(
         lambda row: (row["completed"] / row["total"] * 100) if row["total"] > 0 else 0, 
         axis=1
     ).round(2)
 
-    if x_col == "Month":
-        if order:
-            grouped = grouped[grouped[x_col].isin(order)]
-            grouped[x_col] = pd.Categorical(grouped[x_col], categories=order, ordered=True)
-            valid_x = [month for month in order if month in grouped[x_col].unique()]
-            grouped = grouped.sort_values(x_col)
-        else:
-            valid_x = sorted(grouped[x_col].dropna().unique())
-            grouped = grouped.sort_values(x_col)
-    else:
-        valid_x = sorted(grouped[x_col].dropna().unique())
-        grouped = grouped.sort_values(x_col)
+    if x_col == "Month" and order:
+        grouped = grouped[grouped[x_col].isin(order)]
+        grouped[x_col] = pd.Categorical(grouped[x_col], categories=order, ordered=True)
+
+    grouped = grouped.sort_values(x_col)
 
     return grouped
 
@@ -473,7 +490,7 @@ def prepare_percentage_data(
     )
     total_df = df.groupby(x_col, observed=True).size().reset_index(name="total")
 
-    merged_df = pd.merge(count_df, total_df, on=x_col)
+    merged_df = pd.merge(count_df, total_df, on=x_col, how="left", validate="many_to_one")
     merged_df["percentage"] = (merged_df["count"] / merged_df["total"] * 100).round(2)
 
     if x_col == "Month":
@@ -522,38 +539,38 @@ def load_project_mapping() -> Dict[str, Dict[str, str]]:
         for sheet in xls.sheet_names:
             df_sheet = pd.read_excel(xls, sheet_name=sheet)
             df_sheet.columns = df_sheet.columns.astype(str).str.strip().str.replace("*", "", regex=False)
-            if "Project Name" in df_sheet.columns:
+            if COL_PROJECT_NAME in df_sheet.columns:
                 for _, row in df_sheet.iterrows():
-                    proj = row.get("Project Name")
+                    proj = row.get(COL_PROJECT_NAME)
                     if pd.notna(proj) and str(proj).strip():
                         proj_name = str(proj).strip()
                         norm_key = normalize_project_name(proj_name)
                         if norm_key not in mapping:
                             mapping[norm_key] = {}
-                        if "IDB Team" in df_sheet.columns and pd.notna(row["IDB Team"]) and str(row["IDB Team"]).strip() not in ("", "None", "nan"):
-                            mapping[norm_key]["IDB Team"] = row["IDB Team"]
-                        if "Project Leader or PIC" in df_sheet.columns and pd.notna(row["Project Leader or PIC"]) and str(row["Project Leader or PIC"]).strip() not in ("", "None", "nan"):
-                            mapping[norm_key]["Project Leader or PIC"] = row["Project Leader or PIC"]
+                        if COL_IDB_TEAM in df_sheet.columns and pd.notna(row[COL_IDB_TEAM]) and str(row[COL_IDB_TEAM]).strip() not in ("", "None", "nan"):
+                            mapping[norm_key][COL_IDB_TEAM] = row[COL_IDB_TEAM]
+                        if COL_PIC in df_sheet.columns and pd.notna(row[COL_PIC]) and str(row[COL_PIC]).strip() not in ("", "None", "nan"):
+                            mapping[norm_key][COL_PIC] = row[COL_PIC]
     except Exception:
         pass
     return mapping
 
 
 def apply_project_mapping(df: pd.DataFrame, mapping: Dict[str, Dict[str, str]]) -> pd.DataFrame:
-    if df.empty or "Project Name" not in df.columns:
+    if df.empty or COL_PROJECT_NAME not in df.columns:
         return df
     df_out = df.copy()
     
-    if "IDB Team" not in df_out.columns:
-        df_out["IDB Team"] = pd.NA
-    df_out["IDB Team"] = df_out["IDB Team"].astype(object)
+    if COL_IDB_TEAM not in df_out.columns:
+        df_out[COL_IDB_TEAM] = pd.NA
+    df_out[COL_IDB_TEAM] = df_out[COL_IDB_TEAM].astype(object)
     
-    if "Project Leader or PIC" not in df_out.columns:
-        df_out["Project Leader or PIC"] = pd.NA
-    df_out["Project Leader or PIC"] = df_out["Project Leader or PIC"].astype(object)
+    if COL_PIC not in df_out.columns:
+        df_out[COL_PIC] = pd.NA
+    df_out[COL_PIC] = df_out[COL_PIC].astype(object)
         
     for idx, row in df_out.iterrows():
-        proj = row.get("Project Name")
+        proj = row.get(COL_PROJECT_NAME)
         if pd.notna(proj):
             proj_name = str(proj).strip()
             norm_key = normalize_project_name(proj_name)
@@ -568,17 +585,17 @@ def apply_project_mapping(df: pd.DataFrame, mapping: Dict[str, Dict[str, str]]) 
                 norm_key = fallback_map[norm_key]
                 
             if norm_key in mapping:
-                idb_team = row.get("IDB Team")
+                idb_team = row.get(COL_IDB_TEAM)
                 if pd.isna(idb_team) or str(idb_team).strip() in ("", "None", "nan"):
-                    if "IDB Team" in mapping[norm_key]:
-                        df_out.at[idx, "IDB Team"] = mapping[norm_key]["IDB Team"]
+                    if COL_IDB_TEAM in mapping[norm_key]:
+                        df_out.at[idx, COL_IDB_TEAM] = mapping[norm_key][COL_IDB_TEAM]
                 
-                pic = row.get("Project Leader or PIC")
+                pic = row.get(COL_PIC)
                 if pd.isna(pic) or str(pic).strip() in ("", "None", "nan"):
                     if proj_name.upper() == "LGUS AWS MSP PROJECT":
-                        df_out.at[idx, "Project Leader or PIC"] = "Kurniawan"
-                    elif "Project Leader or PIC" in mapping[norm_key]:
-                        df_out.at[idx, "Project Leader or PIC"] = mapping[norm_key]["Project Leader or PIC"]
+                        df_out.at[idx, COL_PIC] = "Kurniawan"
+                    elif COL_PIC in mapping[norm_key]:
+                        df_out.at[idx, COL_PIC] = mapping[norm_key][COL_PIC]
     return df_out
 
 
@@ -657,9 +674,9 @@ def main() -> None:
         if (
             selected_project
             and selected_project != "All Projects"
-            and "Project Name" in df_all.columns
+            and COL_PROJECT_NAME in df_all.columns
         ):
-            df_all = df_all[df_all["Project Name"] == selected_project]
+            df_all = df_all[df_all[COL_PROJECT_NAME] == selected_project]
 
         selected_sprint = filters.get("selected_sprint")
         if (
@@ -690,24 +707,24 @@ def main() -> None:
 
     df_valid = get_valid_dataframe(df)
     
-    if "Productivity Evaluation" in df_valid.columns:
-        df_valid = df_valid[df_valid["Productivity Evaluation"] != "❓ No Tasks"]
+    if COL_PRODUCTIVITY_EVALUATION in df_valid.columns:
+        df_valid = df_valid[df_valid[COL_PRODUCTIVITY_EVALUATION] != LABEL_NO_TASKS]
         
     df_valid = attach_quality_score(df_valid)
 
     total_workload = (
-        df_valid["Total Workload"].sum() if "Total Workload" in df_valid.columns else 0
+        df_valid[COL_TOTAL_WORKLOAD].sum() if COL_TOTAL_WORKLOAD in df_valid.columns else 0
     )
     completed_workload = (
-        df_valid["Completed Workload"].sum()
-        if "Completed Workload" in df_valid.columns
+        df_valid[COL_COMPLETED_WORKLOAD].sum()
+        if COL_COMPLETED_WORKLOAD in df_valid.columns
         else 0
     )
     ffr = calculate_ffr(completed_workload, total_workload)
 
     avg_quality_score = (
-        df_valid["Quality Evaluation Numeric"].mean()
-        if "Quality Evaluation Numeric" in df_valid.columns
+        df_valid[COL_QUALITY_EVALUATION_NUMERIC].mean()
+        if COL_QUALITY_EVALUATION_NUMERIC in df_valid.columns
         else float("nan")
     )
 
@@ -720,48 +737,53 @@ def main() -> None:
     st.markdown(HR_STYLE, unsafe_allow_html=True)
 
     summary_cols = [
-        "Project Name",
-        "IDB Team",
-        "Project Leader or PIC",
+        COL_PROJECT_NAME,
+        COL_IDB_TEAM,
+        COL_PIC,
         "Month",
         "Sprint",
-        "No of Employee",
-        "Total Workload",
-        "Completed Workload",
+        COL_NO_OF_EMPLOYEE,
+        COL_TOTAL_WORKLOAD,
+        COL_COMPLETED_WORKLOAD,
         "Defect",
-        "Fixed defect",
-        "Productivity Rate",
-        "Defect Density",
-        "Defect Correction Rate",
+        COL_FIXED_DEFECT,
+        COL_PRODUCTIVITY_RATE,
+        COL_DEFECT_DENSITY,
+        COL_DEFECT_CORRECTION_RATE,
     ]
 
-    if project_type_label == "SI" and "Sprint Schedule" in df_valid.columns:
-        summary_cols.insert(4, "Sprint Schedule")
+    if project_type_label == "SI" and COL_SPRINT_SCHEDULE in df_valid.columns:
+        summary_cols.insert(4, COL_SPRINT_SCHEDULE)
 
     df_summary = df_valid.copy()
-    if "Productivity Rate" in df_summary.columns:
-        df_summary["Productivity Rate"] = df_summary["Productivity Rate"].apply(
+    if COL_PRODUCTIVITY_RATE in df_summary.columns:
+        df_summary[COL_PRODUCTIVITY_RATE] = df_summary[COL_PRODUCTIVITY_RATE].apply(
             lambda x: f"{int(round(x))}%" if pd.notna(x) else ""
         )
-    if "Defect Correction Rate" in df_summary.columns:
-        df_summary["Defect Correction Rate"] = df_summary["Defect Correction Rate"].apply(
+    if COL_DEFECT_CORRECTION_RATE in df_summary.columns:
+        df_summary[COL_DEFECT_CORRECTION_RATE] = df_summary[COL_DEFECT_CORRECTION_RATE].apply(
             lambda x: f"{int(round(x))}%" if pd.notna(x) else ""
         )
-    if "Defect Density" in df_summary.columns:
-        df_summary["Defect Density"] = df_summary["Defect Density"].round(2)
+    if COL_DEFECT_DENSITY in df_summary.columns:
+        df_summary[COL_DEFECT_DENSITY] = df_summary[COL_DEFECT_DENSITY].round(2)
 
     available_cols = [col for col in summary_cols if col in df_summary.columns]
     if project_type_label == "SI" and "Month" in available_cols:
         available_cols.remove("Month")
+        
+    if COL_NO_OF_EMPLOYEE in available_cols:
+        is_empty = df_summary[COL_NO_OF_EMPLOYEE].isna() | df_summary[COL_NO_OF_EMPLOYEE].astype(str).str.strip().str.lower().isin(["", "none", "nan", "null"])
+        if is_empty.all():
+            available_cols.remove(COL_NO_OF_EMPLOYEE)
 
     df_summary = df_summary[available_cols]
     df_summary.index = range(1, len(df_summary) + 1)
 
     col_pie_1, col_pie_2 = st.columns(2)
     with col_pie_1:
-        render_nivo_pie("nivo_function_productivity", "🎯 Productivity", df_valid, "Productivity Evaluation")
+        render_nivo_pie("nivo_function_productivity", "🎯 Productivity", df_valid, COL_PRODUCTIVITY_EVALUATION)
     with col_pie_2:
-        render_nivo_pie("nivo_quality_evaluation", "🧪 Quality", df_valid, "Quality Evaluation")
+        render_nivo_pie("nivo_quality_evaluation", "🧪 Quality", df_valid, COL_QUALITY_EVALUATION)
 
     st.markdown(HR_STYLE, unsafe_allow_html=True)
     st.subheader("📄 Project Summary Data")
@@ -774,18 +796,18 @@ def main() -> None:
     st.subheader("🧠 Automatic Evaluation")
 
     eval_cols = [
-        "Project Name",
+        COL_PROJECT_NAME,
         "Month",
         "Sprint",
-        "Total Workload",
-        "Productivity Evaluation",
-        "Quality Evaluation",
+        COL_TOTAL_WORKLOAD,
+        COL_PRODUCTIVITY_EVALUATION,
+        COL_QUALITY_EVALUATION,
         "Comment",
         "Action Plan",
     ]
 
-    if project_type_label == "SI" and "Sprint Schedule" in df_valid.columns:
-        eval_cols.insert(3, "Sprint Schedule")
+    if project_type_label == "SI" and COL_SPRINT_SCHEDULE in df_valid.columns:
+        eval_cols.insert(3, COL_SPRINT_SCHEDULE)
 
     if project_type_label == "SI" and "Month" in eval_cols:
         eval_cols.remove("Month")
@@ -805,17 +827,17 @@ def main() -> None:
 
         # Filter out "No Tasks" rows, sama seperti df_valid yang dipakai di metric atas
         df_all_trend = df_all.copy()
-        if "Productivity Evaluation" in df_all_trend.columns:
-            df_all_trend = df_all_trend[df_all_trend["Productivity Evaluation"] != "❓ No Tasks"]
-        if "Quality Evaluation" in df_all_trend.columns:
-            df_all_trend = df_all_trend[df_all_trend["Quality Evaluation"] != "❓ No Tasks"]
+        if COL_PRODUCTIVITY_EVALUATION in df_all_trend.columns:
+            df_all_trend = df_all_trend[df_all_trend[COL_PRODUCTIVITY_EVALUATION] != LABEL_NO_TASKS]
+        if COL_QUALITY_EVALUATION in df_all_trend.columns:
+            df_all_trend = df_all_trend[df_all_trend[COL_QUALITY_EVALUATION] != LABEL_NO_TASKS]
 
         order_for_trend = bulan_order if x_axis_col == "Month" else []
         ffe_pivot = prepare_percentage_data(
-            df_all_trend, "Productivity Evaluation", order_for_trend, x_axis_col, LINE_COLOR_MAP
+            df_all_trend, COL_PRODUCTIVITY_EVALUATION, order_for_trend, x_axis_col, LINE_COLOR_MAP
         )
         qe_pivot = prepare_percentage_data(
-            df_all_trend, "Quality Evaluation", order_for_trend, x_axis_col, LINE_COLOR_MAP
+            df_all_trend, COL_QUALITY_EVALUATION, order_for_trend, x_axis_col, LINE_COLOR_MAP
         )
 
         trend_col1, trend_col2 = st.columns(2)
@@ -829,22 +851,22 @@ def main() -> None:
                         y=ffe_pivot[label] if label in ffe_pivot.columns else [],
                         mode="lines+markers",
                         name=label,
-                        line=dict(color=color, width=3),
-                        marker=dict(size=8),
+                        line={"color": color, "width": 3},
+                        marker={"size": 8},
                     )
                 )
             fig_ffe.update_layout(
                 title="🎯 Productivity Evaluation",
                 plot_bgcolor="white",
-                margin=dict(l=40, r=20, t=60, b=40),
+                margin={"l": 40, "r": 20, "t": 60, "b": 40},
                 title_x=0.05,
-                xaxis=dict(title=x_axis_col, showgrid=False),
-                yaxis=dict(
-                    title="Percentage %",
-                    showgrid=True,
-                    gridcolor="lightgray",
-                    ticksuffix=" %",
-                ),
+                xaxis={"title": x_axis_col, "showgrid": False},
+                yaxis={
+                    "title": COL_PERCENTAGE,
+                    "showgrid": True,
+                    "gridcolor": "lightgray",
+                    "ticksuffix": " %",
+                },
             )
             if x_axis_col == "Month" and x_axis_col in ffe_pivot.columns:
                 tick_vals = ffe_pivot[x_axis_col].tolist()
@@ -859,7 +881,7 @@ def main() -> None:
             else:
                 fig_ffe.update_xaxes(showgrid=False, tickangle=0)
             fig_ffe.update_yaxes(
-                title_text="Percentage %",
+                title_text=COL_PERCENTAGE,
                 showgrid=True,
                 gridcolor="lightgray",
                 ticksuffix=" %",
@@ -875,22 +897,22 @@ def main() -> None:
                         y=qe_pivot[label] if label in qe_pivot.columns else [],
                         mode="lines+markers",
                         name=label,
-                        line=dict(color=color, width=3),
-                        marker=dict(size=8),
+                        line={"color": color, "width": 3},
+                        marker={"size": 8},
                     )
                 )
             fig_qe.update_layout(
                 title="🧪 Quality Evaluation per Month",
                 plot_bgcolor="white",
-                margin=dict(l=40, r=20, t=60, b=40),
+                margin={"l": 40, "r": 20, "t": 60, "b": 40},
                 title_x=0.05,
-                xaxis=dict(title=x_axis_col, showgrid=False),
-                yaxis=dict(
-                    title="Percentage %",
-                    showgrid=True,
-                    gridcolor="lightgray",
-                    ticksuffix=" %",
-                ),
+                xaxis={"title": x_axis_col, "showgrid": False},
+                yaxis={
+                    "title": COL_PERCENTAGE,
+                    "showgrid": True,
+                    "gridcolor": "lightgray",
+                    "ticksuffix": " %",
+                },
             )
             if x_axis_col == "Month" and x_axis_col in qe_pivot.columns:
                 tick_vals = qe_pivot[x_axis_col].tolist()
@@ -905,7 +927,7 @@ def main() -> None:
             else:
                 fig_qe.update_xaxes(showgrid=False, tickangle=0)
             fig_qe.update_yaxes(
-                title_text="Percentage %",
+                title_text=COL_PERCENTAGE,
                 showgrid=True,
                 gridcolor="lightgray",
                 ticksuffix=" %",

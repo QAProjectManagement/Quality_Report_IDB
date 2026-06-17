@@ -96,8 +96,8 @@ def show_login() -> bool:
         return True
 
     # Centered login layout
-    spacer_left, main_column, spacer_right = st.columns([1, 2, 1])
-    with main_column:
+    _, col_login, _ = st.columns([1, 2, 1])
+    with col_login:
         st.image("lgsm_logo.png", width=220)
         st.title("Login - Quality Report LG SinarMas")
 
