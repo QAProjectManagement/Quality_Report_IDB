@@ -239,6 +239,46 @@ html, body, [class*="css"] {
 ::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); border-radius: 3px; }
 ::-webkit-scrollbar-thumb { background: rgba(99, 102, 241, 0.5); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(99, 102, 241, 0.8); }
+
+/* ── Hide Streamlit Top Toolbar & Footer ── */
+[data-testid="stToolbar"] { display: none !important; }
+[data-testid="stDecoration"] { display: none !important; }
+footer { display: none !important; }
+#MainMenu { display: none !important; }
+
+/* ── Streamlit top header bar ── */
+header[data-testid="stHeader"] {
+    background: rgba(13, 16, 31, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.15) !important;
+}
+
+/* ── Dataframe / Table dark styling ── */
+[data-testid="stDataFrame"] > div {
+    background: #13162b !important;
+    border-radius: 12px !important;
+}
+[data-testid="stDataFrame"] iframe {
+    background: #13162b !important;
+    border-radius: 12px !important;
+    color-scheme: dark !important;
+}
+
+/* ── Streamlit Elements (nivo) wrapper ── */
+[data-testid="stCustomComponentV1"] iframe {
+    background: transparent !important;
+}
+
+/* ── st.subheader accent line ── */
+.stApp h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    border-radius: 2px;
+    margin-top: 4px;
+}
 </style>
 """
 
@@ -1031,33 +1071,38 @@ def main() -> None:
                 )
             fig_ffe.update_layout(
                 title="🎯 Productivity Evaluation",
-                plot_bgcolor="white",
+                plot_bgcolor="#13162b",
+                paper_bgcolor="#13162b",
+                font={"color": "#94a3b8", "family": "Inter, sans-serif"},
+                title_font={"color": "#a5b4fc", "size": 14},
                 margin={"l": 40, "r": 20, "t": 60, "b": 40},
                 title_x=0.05,
-                xaxis={"title": x_axis_col, "showgrid": False},
+                legend={"font": {"color": "#94a3b8"}, "bgcolor": "rgba(0,0,0,0)"},
+                xaxis={"title": x_axis_col, "showgrid": False, "color": "#64748b", "linecolor": "rgba(99,102,241,0.2)"},
                 yaxis={
                     "title": COL_PERCENTAGE,
                     "showgrid": True,
-                    "gridcolor": "lightgray",
+                    "gridcolor": "rgba(99,102,241,0.15)",
+                    "color": "#64748b",
                     "ticksuffix": " %",
+                    "linecolor": "rgba(99,102,241,0.2)",
                 },
             )
             if x_axis_col == "Month" and x_axis_col in ffe_pivot.columns:
                 tick_vals = ffe_pivot[x_axis_col].tolist()
                 tick_text = [MONTH_ABBREVIATIONS.get(str(val), str(val)) for val in tick_vals]
                 fig_ffe.update_xaxes(
-                    showgrid=False,
-                    tickangle=0,
-                    tickmode="array",
-                    tickvals=tick_vals,
-                    ticktext=tick_text,
-                )
+                showgrid=False, tickangle=0,
+                tickmode="array", tickvals=tick_vals, ticktext=tick_text,
+                color="#64748b",
+            )
             else:
-                fig_ffe.update_xaxes(showgrid=False, tickangle=0)
+                fig_ffe.update_xaxes(showgrid=False, tickangle=0, color="#64748b")
             fig_ffe.update_yaxes(
                 title_text=COL_PERCENTAGE,
                 showgrid=True,
-                gridcolor="lightgray",
+                gridcolor="rgba(99,102,241,0.15)",
+                color="#64748b",
                 ticksuffix=" %",
             )
             st.plotly_chart(fig_ffe, use_container_width=True)
@@ -1077,33 +1122,38 @@ def main() -> None:
                 )
             fig_qe.update_layout(
                 title="🧪 Quality Evaluation per Month",
-                plot_bgcolor="white",
+                plot_bgcolor="#13162b",
+                paper_bgcolor="#13162b",
+                font={"color": "#94a3b8", "family": "Inter, sans-serif"},
+                title_font={"color": "#a5b4fc", "size": 14},
                 margin={"l": 40, "r": 20, "t": 60, "b": 40},
                 title_x=0.05,
-                xaxis={"title": x_axis_col, "showgrid": False},
+                legend={"font": {"color": "#94a3b8"}, "bgcolor": "rgba(0,0,0,0)"},
+                xaxis={"title": x_axis_col, "showgrid": False, "color": "#64748b", "linecolor": "rgba(99,102,241,0.2)"},
                 yaxis={
                     "title": COL_PERCENTAGE,
                     "showgrid": True,
-                    "gridcolor": "lightgray",
+                    "gridcolor": "rgba(99,102,241,0.15)",
+                    "color": "#64748b",
                     "ticksuffix": " %",
+                    "linecolor": "rgba(99,102,241,0.2)",
                 },
             )
             if x_axis_col == "Month" and x_axis_col in qe_pivot.columns:
                 tick_vals = qe_pivot[x_axis_col].tolist()
                 tick_text = [MONTH_ABBREVIATIONS.get(str(val), str(val)) for val in tick_vals]
                 fig_qe.update_xaxes(
-                    showgrid=False,
-                    tickangle=0,
-                    tickmode="array",
-                    tickvals=tick_vals,
-                    ticktext=tick_text,
-                )
+                showgrid=False, tickangle=0,
+                tickmode="array", tickvals=tick_vals, ticktext=tick_text,
+                color="#64748b",
+            )
             else:
-                fig_qe.update_xaxes(showgrid=False, tickangle=0)
+                fig_qe.update_xaxes(showgrid=False, tickangle=0, color="#64748b")
             fig_qe.update_yaxes(
                 title_text=COL_PERCENTAGE,
                 showgrid=True,
-                gridcolor="lightgray",
+                gridcolor="rgba(99,102,241,0.15)",
+                color="#64748b",
                 ticksuffix=" %",
             )
             st.plotly_chart(fig_qe, use_container_width=True)
