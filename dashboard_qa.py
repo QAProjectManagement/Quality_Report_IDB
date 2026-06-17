@@ -555,11 +555,17 @@ def render_nivo_pie(chart_id: str, title: str, df_source: pd.DataFrame, column_n
         ]
 
     with elements(chart_id):
-        with mui.Box(sx={"height": 500}):
+        with mui.Box(sx={
+            "height": 500,
+            "backgroundColor": "#13162b",
+            "borderRadius": "14px",
+            "border": "1px solid rgba(99, 102, 241, 0.2)",
+            "padding": "12px",
+        }):
             mui.Typography(
                 title,
                 variant="h6",
-                sx={"mb": 2, "fontWeight": "bold", "color": "#333"},
+                sx={"mb": 2, "fontWeight": "bold", "color": "#a5b4fc"},
             )
             nivo.Pie(
                 data=data,
@@ -571,7 +577,7 @@ def render_nivo_pie(chart_id: str, title: str, df_source: pd.DataFrame, column_n
                 borderWidth=1,
                 borderColor={"from": "color", "modifiers": [["darker", 0.8]]},
                 arcLinkLabelsSkipAngle=10,
-                arcLinkLabelsTextColor="grey",
+                arcLinkLabelsTextColor="#94a3b8",
                 arcLinkLabelsColor={"from": "color"},
                 arcLabelsSkipAngle=10,
                 arcLabelsTextColor={"from": "color", "modifiers": [["darker", 2]]},
@@ -584,19 +590,23 @@ def render_nivo_pie(chart_id: str, title: str, df_source: pd.DataFrame, column_n
                         "itemHeight": 18,
                         "symbolSize": 18,
                         "symbolShape": "circle",
-                        "effects": [{"on": "hover", "style": {"itemTextColor": "#000"}}],
+                        "itemTextColor": "#94a3b8",
+                        "effects": [{"on": "hover", "style": {"itemTextColor": "#e2e8f0"}}],
                     }
                 ],
                 theme={
+                    "background": "#13162b",
+                    "text": {"fill": "#94a3b8", "fontSize": 12},
                     "tooltip": {
                         "container": {
-                            "background": "#333",
-                            "color": "#fff",
+                            "background": "#1e2340",
+                            "color": "#e2e8f0",
                             "fontSize": "14px",
-                            "borderRadius": "4px",
+                            "borderRadius": "8px",
+                            "border": "1px solid rgba(99,102,241,0.3)",
                             "padding": PADDING_STYLE,
                         }
-                    }
+                    },
                 },
             )
 
