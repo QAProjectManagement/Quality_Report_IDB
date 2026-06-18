@@ -897,12 +897,11 @@ def main() -> None:
 
     if not df_all.empty:
         selected_project = filters.get("selected_project")
-        if (
-            selected_project
-            and selected_project != "All Projects"
-            and COL_PROJECT_NAME in df_all.columns
-        ):
-            df_all = df_all[df_all[COL_PROJECT_NAME] == selected_project]
+        if isinstance(selected_project, list) and COL_PROJECT_NAME in df_all.columns:
+            if not selected_project:
+                df_all = df_all.iloc[0:0]
+            else:
+                df_all = df_all[df_all[COL_PROJECT_NAME].isin(selected_project)]
 
         selected_sprint = filters.get("selected_sprint")
         if (

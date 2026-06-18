@@ -43,15 +43,17 @@ def load_component(context: Dict[str, Any]) -> Dict[str, Any]:
     df_all_monthly = load_sm_data(file_path, mtime)
     df = df_all_monthly.copy()
 
-    selected_project: Optional[str] = None
+    selected_project: List[str] = []
     if "Project Name" in df.columns:
         project_options = sorted(df["Project Name"].dropna().unique().tolist())
         if project_options:
-            selected_project = st.sidebar.selectbox(
-                "Select Project", ["All Projects"] + project_options
+            selected_project = st.sidebar.multiselect(
+                "Select Project", options=project_options, default=project_options
             )
-            if selected_project != "All Projects":
-                df = df[df["Project Name"] == selected_project]
+            if selected_project:
+                df = df[df["Project Name"].isin(selected_project)]
+            else:
+                df = df.iloc[0:0] # return empty if no project is selected
 
     selected_month: Optional[str] = None
     month_options = ["All Months"]

@@ -237,7 +237,7 @@ def load_component(context: Dict[str, Any]) -> Dict[str, Any]:
     min_weekly_start = infer_min_weekly_start(weekly_sheet_names)
 
     df = weekly_df_all.copy()
-    selected_project: Optional[str] = None
+    selected_project: List[str] = []
     selected_weekly: Optional[str] = None
     selected_sprint: Optional[str] = None
 
@@ -263,11 +263,13 @@ def load_component(context: Dict[str, Any]) -> Dict[str, Any]:
         if "Project Name" in df.columns:
             project_options = sorted(df["Project Name"].dropna().unique().tolist())
             if project_options:
-                selected_project = st.sidebar.selectbox(
-                    "Select Project", ["All Projects"] + project_options
+                selected_project = st.sidebar.multiselect(
+                    "Select Project", options=project_options, default=project_options
                 )
-                if selected_project != "All Projects":
-                    df = df[df["Project Name"] == selected_project]
+                if selected_project:
+                    df = df[df["Project Name"].isin(selected_project)]
+                else:
+                    df = df.iloc[0:0]
 
         if weekly_sheet_names:
             project_weeklies: List[str] = []
