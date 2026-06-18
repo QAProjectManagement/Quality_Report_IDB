@@ -122,6 +122,15 @@ html, body, [class*="css"] {
     color: #a5b4fc !important;
     font-weight: 600 !important;
 }
+[data-testid="stSidebar"] .stCheckbox span {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    line-height: 1.4 !important;
+}
+[data-testid="stSidebar"] .stCheckbox p {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+}
 
 /* ── Main Content Area ── */
 .main .block-container {
