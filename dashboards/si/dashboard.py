@@ -97,8 +97,10 @@ def render_si_dashboard() -> None:
     ffr = calculate_ffr(completed_workload, total_workload)
     avg_quality_score = df_valid["Quality Evaluation"].map(QUALITY_SCORE_MAP).mean()
     avg_quality_label = summarize_quality(avg_quality_score)
+    total_defect = df_valid["Defect"].sum() if "Defect" in df_valid.columns else 0.0
+    fixed_defect = df_valid["Fixed defect"].sum() if "Fixed defect" in df_valid.columns else 0.0
 
-    render_global_metrics(total_workload, completed_workload, ffr, avg_quality_label)
+    render_global_metrics(total_workload, completed_workload, ffr, avg_quality_label, total_defect, fixed_defect)
     render_divider()
 
     render_donut_charts(df_view)

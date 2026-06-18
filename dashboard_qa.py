@@ -950,12 +950,22 @@ def main() -> None:
         if COL_QUALITY_EVALUATION_NUMERIC in df_valid.columns
         else float("nan")
     )
+    quality_rate = (avg_quality_score / 3.0 * 100) if not pd.isna(avg_quality_score) else float("nan")
 
-    col1, col2, col3, col4 = st.columns(4)
+    total_defect = (
+        df_valid["Defect"].sum() if "Defect" in df_valid.columns else 0
+    )
+    fixed_defect = (
+        df_valid[COL_FIXED_DEFECT].sum() if COL_FIXED_DEFECT in df_valid.columns else 0
+    )
+
+    col1, col2, col3, col4, col5, col6 = st.columns(6)
     col1.metric("📌 Total Workload", f"{int(total_workload)}")
-    col2.metric("✅ Completed Workload", f"{int(completed_workload)}")
-    col3.metric("🎯 Productivity Rate", f"{ffr:.1f}%" if total_workload > 0 else "N/A")
-    col4.metric("🧪 Avg. Quality Evaluation", score_to_label(avg_quality_score))
+    col2.metric("✅ Complete Workload", f"{int(completed_workload)}")
+    col3.metric("🐛 Total Defect", f"{int(total_defect)}")
+    col4.metric("🔧 Defect Resolved", f"{int(fixed_defect)}")
+    col5.metric("🎯 Productivity Rate", f"{ffr:.1f}%" if total_workload > 0 else "N/A")
+    col6.metric("🧪 Quality Rate", f"{quality_rate:.1f}%" if not pd.isna(quality_rate) else "N/A")
 
     st.markdown(HR_STYLE, unsafe_allow_html=True)
 

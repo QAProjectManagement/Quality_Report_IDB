@@ -353,12 +353,21 @@ def build_evaluation_table(df_valid: pd.DataFrame, project_type: str) -> pd.Data
     return df_eval
 
 
-def render_global_metrics(total_workload: float, completed_workload: float, ffr: float, avg_label: str) -> None:
-    col1, col2, col3, col4 = st.columns(4)
+def render_global_metrics(
+    total_workload: float,
+    completed_workload: float,
+    ffr: float,
+    avg_label: str,
+    total_defect: float = 0.0,
+    fixed_defect: float = 0.0,
+) -> None:
+    col1, col2, col3, col4, col5, col6 = st.columns(6)
     col1.metric("Total Workload", f"{int(total_workload)}")
     col2.metric("Completed Workload", f"{int(completed_workload)}")
     col3.metric("Productivity Rate", f"{ffr:.1f}%" if total_workload > 0 else "N/A")
     col4.metric("Avg. Quality Evaluation", avg_label)
+    col5.metric("Total Defect Found", f"{int(total_defect)}")
+    col6.metric("Defect Resolved", f"{int(fixed_defect)}")
 
 
 def render_donut_charts(df: pd.DataFrame) -> None:
