@@ -263,9 +263,11 @@ def load_component(context: Dict[str, Any]) -> Dict[str, Any]:
         if "Project Name" in df.columns:
             project_options = sorted(df["Project Name"].dropna().unique().tolist())
             if project_options:
-                selected_project = st.sidebar.multiselect(
-                    "Select Project", options=project_options, default=project_options
-                )
+                with st.sidebar.expander("Select Project"):
+                    for proj in project_options:
+                        if st.checkbox(proj, value=True, key=f"weekly_proj_{proj}"):
+                            selected_project.append(proj)
+                        
                 if selected_project:
                     df = df[df["Project Name"].isin(selected_project)]
                 else:
