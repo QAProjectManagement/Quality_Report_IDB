@@ -753,7 +753,7 @@ def normalize_project_name(name: str) -> str:
 
 
 @st.cache_data
-def load_project_mapping() -> Dict[str, Dict[str, str]]:
+def load_project_mapping(mtime: float = 0.0) -> Dict[str, Dict[str, str]]:
     path_2025 = r"data/evidence/data_procesor/qualityReportIDBTest_December_2025.xlsx"
     mapping: Dict[str, Dict[str, str]] = {}
     try:
@@ -881,7 +881,9 @@ def main() -> None:
     df_all = convert_numeric_columns(df_all, NUMERIC_COLUMNS)
 
     # Apply 2025 mapping to fill missing IDB Team and PIC
-    mapping = load_project_mapping()
+    path_2025 = r"data/evidence/data_procesor/qualityReportIDBTest_December_2025.xlsx"
+    mtime_2025 = os.path.getmtime(path_2025) if os.path.exists(path_2025) else 0.0
+    mapping = load_project_mapping(mtime_2025)
     df = apply_project_mapping(df, mapping)
     df_all = apply_project_mapping(df_all, mapping)
 

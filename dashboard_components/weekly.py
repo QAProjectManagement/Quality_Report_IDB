@@ -182,8 +182,10 @@ def _sort_weekly_labels(labels: Iterable[str]) -> List[str]:
     return labels_list
 
 
+import os
+
 @st.cache_data
-def load_weekly_data(file_path: str) -> Tuple[pd.DataFrame, List[str], List[str]]:
+def load_weekly_data(file_path: str, mtime: float = 0.0) -> Tuple[pd.DataFrame, List[str], List[str]]:
     """Return weekly_df_all, timeframe_order, and weekly_sheet_names."""
     try:
         weekly_xls = pd.ExcelFile(file_path)
@@ -230,7 +232,8 @@ def load_component(context: Dict[str, Any]) -> Dict[str, Any]:
     weekly_file_path: str = context["weekly_file_path"]
     bulan_order: List[str] = list(context.get("bulan_order", []))
 
-    weekly_df_all, timeframe_order, weekly_sheet_names = load_weekly_data(weekly_file_path)
+    mtime = os.path.getmtime(weekly_file_path) if os.path.exists(weekly_file_path) else 0.0
+    weekly_df_all, timeframe_order, weekly_sheet_names = load_weekly_data(weekly_file_path, mtime)
     min_weekly_start = infer_min_weekly_start(weekly_sheet_names)
 
     df = weekly_df_all.copy()

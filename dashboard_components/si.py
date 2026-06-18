@@ -7,8 +7,10 @@ import pandas as pd
 import streamlit as st
 
 
+import os
+
 @st.cache_data
-def load_si_data(file_path: str) -> pd.DataFrame:
+def load_si_data(file_path: str, mtime: float = 0.0) -> pd.DataFrame:
     try:
         xls = pd.ExcelFile(file_path)
         df = pd.read_excel(xls, sheet_name="SI")
@@ -26,7 +28,8 @@ def load_component(context: Dict[str, Any]) -> Dict[str, Any]:
     bulan_order: List[str] = list(context["bulan_order"])
     file_path: str = context["file_path"]
 
-    df = load_si_data(file_path)
+    mtime = os.path.getmtime(file_path) if os.path.exists(file_path) else 0.0
+    df = load_si_data(file_path, mtime)
     df_all = df.copy()
 
     selected_project: Optional[str] = None

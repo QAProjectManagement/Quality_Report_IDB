@@ -9,8 +9,10 @@ import streamlit as st
 from . import weekly
 
 
+import os
+
 @st.cache_data
-def load_sm_data(file_path: str) -> pd.DataFrame:
+def load_sm_data(file_path: str, mtime: float = 0.0) -> pd.DataFrame:
     try:
         xls = pd.ExcelFile(file_path)
     except Exception:
@@ -37,7 +39,8 @@ def load_component(context: Dict[str, Any]) -> Dict[str, Any]:
     bulan_order: List[str] = list(context["bulan_order"])
     file_path: str = context["file_path"]
 
-    df_all_monthly = load_sm_data(file_path)
+    mtime = os.path.getmtime(file_path) if os.path.exists(file_path) else 0.0
+    df_all_monthly = load_sm_data(file_path, mtime)
     df = df_all_monthly.copy()
 
     selected_project: Optional[str] = None
